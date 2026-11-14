@@ -84,81 +84,31 @@ LogicSim3 includes 8 distinct output visualizers and instruments designed to ins
 
 The indicator light models an incandescent lamp or single-ended logic probe. When the input reaches logic level HIGH (1 / +5V), the lamp illuminates with a warm multi-layer golden-yellow radial halo. At logic level LOW (0 / 0V), it remains an unlit dark charcoal bezel.
 
-| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
-| :---: | :---: | :---: |
-| <img src="assets/outputs/light_indicator.gif" alt="Indicator Light Simulation" width="340" /> | <img src="assets/outputs/light_indicator.png" alt="Indicator Light Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/light_indicator.mp4) |
 
-- **Type ID**: `LIGHT`
-- **Port Configuration**: 1 Input Port (Western side)
-- **Active State**: HIGH (1 / +5V) triggers `#facc15` illumination with outer radial blur
-- **Inactive State**: LOW (0 / 0V) renders dark `#1e1e1e` body with `#374151` rim
-- **Common Usage**: Simple logic state verification, truth table generation, gate test benches
-
----
 
 ### 2. Polarity-Aware LED (`LED`)
 
 Unlike simple lamps, the polarity-aware LED models an actual semiconductor diode junction. It features separate Anode (`+`, Pin 0) and Cathode (`-`, Pin 1) leads. Conduction occurs only when forward biased—requiring a HIGH potential on the Anode and a true LOW/GND return path on the Cathode.
 
-| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
-| :---: | :---: | :---: |
-| <img src="assets/outputs/polarity_led.gif" alt="Polarity LED Simulation" width="340" /> | <img src="assets/outputs/polarity_led.png" alt="Polarity LED Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/polarity_led.mp4) |
 
-- **Type ID**: `LED`
-- **Port Configuration**: 2 Input Ports (Pin 0: Anode `+`, Pin 1: Cathode `-`)
-- **Forward Bias Condition**: `inputState[0] === 1 && inputContention[1].hasLow`
-- **Visual Output**: Domed lens with flat cathode rim, glowing crimson red (`#ef4444`) with photon halo
-- **Reverse Bias / Floating**: Completely dark burgundy (`#450a0a`), modeling diode cutoff behavior
-
----
 
 ### 3. 4-Bit Hexadecimal Display (`HEX_DISPLAY`)
 
 An authentic 7-segment style numeric digital readout with high-contrast black enclosure. Four binary input pins weighted 1, 2, 4, and 8 are decoded in real-time to render hexadecimal digits `0` through `9` and `A` through `F`.
 
-| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
-| :---: | :---: | :---: |
-| <img src="assets/outputs/hex_display.gif" alt="Hex Display Simulation" width="340" /> | <img src="assets/outputs/hex_display.png" alt="Hex Display Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/hex_display.mp4) |
 
-- **Type ID**: `HEX_DISPLAY`
-- **Port Configuration**: 4 Binary Inputs (Weighted: Pin 0 = 1, Pin 1 = 2, Pin 2 = 4, Pin 3 = 8)
-- **Display Range**: `0x0` (0) to `0xF` (15)
-- **Styling**: Deep black background (`#000`), bold monospace ruby-red phosphor numerals (`#ef4444`)
-- **Common Usage**: Binary counters, 4-bit ALUs, adder output readouts, register file state inspect
-
----
 
 ### 4. Multi-Segment LED Bar Graph (`BAR_GRAPH`)
 
 A multi-segment vertical ladder display modeling industrial level meters, volume meters, and bus indicators. Each segment illuminates in glowing red when its corresponding input is asserted HIGH.
 
-| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
-| :---: | :---: | :---: |
-| <img src="assets/outputs/bar_graph.gif" alt="Bar Graph Simulation" width="340" /> | <img src="assets/outputs/bar_graph.png" alt="Bar Graph Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/bar_graph.mp4) |
 
-- **Type ID**: `BAR_GRAPH`
-- **Configurable Bit Width**: Default 10 segments (configurable to 4, 8, 10, or 16 bits)
-- **Visual Indicators**: Individual segmented cells with index numbering `0` through `N-1`
-- **Glow Effects**: Active bars illuminate with crimson red core (`#ef4444`) and subtle diffusion bloom
-- **Common Usage**: Decoder outputs, thermometer codes, priority encoder visualization, signal bus monitor
-
----
 
 ### 5. Multi-Bit Binary Digit Readout (`BITS_OUT`)
 
 The `BITS_OUT` component provides a crisp, tile-based numeric binary representation of bus lines. Each bit is rendered within a high-contrast white card showing bold black digital `0` or `1` numerals, complete with MSB (Most Significant Bit) and LSB (Least Significant Bit) labels.
 
-| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
-| :---: | :---: | :---: |
-| <img src="assets/outputs/bits_out.gif" alt="Bits Out Simulation" width="340" /> | <img src="assets/outputs/bits_out.png" alt="Bits Out Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/bits_out.mp4) |
 
-- **Type ID**: `BITS_OUT`
-- **Configurable Bit Width**: 1 to 32 parallel bits (default 4 or 8 bits)
-- **Input Connections**: Top-mounted pin terminals corresponding to each parallel bit lane
-- **Orientation**: Automatic MSB on the far left, LSB on the far right
-- **Common Usage**: Parallel arithmetic testing, accumulator inspection, memory address line monitoring
-
----
 
 ### 6. 8x8 Multiplexed LED Matrix (`LED_MATRIX`)
 
@@ -180,33 +130,13 @@ An 8x8 matrix display with rounded bezel modeling real-world multiplexed dot-mat
 
 An oscilloscope instrument that samples digital signal transitions in real-time, advances a continuous scrolling square-wave trace on an phosphor CRT screen, and measures clock period to compute live frequency readouts.
 
-| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
-| :---: | :---: | :---: |
-| <img src="assets/outputs/scope.gif" alt="Oscilloscope Simulation" width="340" /> | <img src="assets/outputs/scope.png" alt="Oscilloscope Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/scope.mp4) |
 
-- **Type ID**: `SCOPE`
-- **CRT Screen**: Dark grid enclosure with green graticule calibration marks
-- **Trace Rendering**: Phosphor emerald square wave (`#4ade80`) with edge transitions
-- **Auto-Ranging Timebase**: Synchronizes window duration to detected input period ($4 \times T_{period}$, clamped between $0.1\text{ms}$ and $2000\text{ms}$)
-- **Frequency Counter**: Automatically calculates $f = \frac{1000}{\Delta t_{ms}}\text{ Hz}$ on rising edges and renders digital readout in the upper-right corner
-
----
 
 ### 8. 16-Channel Logic Analyzer (`ANALYZER`)
 
 The logic analyzer provides a benchtop multi-line timing instrument. With 16 synchronized digital input channels (`0` through `F`), it records state transitions simultaneously and visualizes complex timing relationships, bus transitions, and clock divider cascades.
 
-| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
-| :---: | :---: | :---: |
-| <img src="assets/outputs/analyzer.gif" alt="Logic Analyzer Simulation" width="340" /> | <img src="assets/outputs/analyzer.png" alt="Logic Analyzer Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/analyzer.mp4) |
 
-- **Type ID**: `ANALYZER`
-- **Channels**: 16 Independent Digital Input Ports (Hexadecimal labels `0` through `F`)
-- **Waveform Traces**: Synchronized cyan timing lanes (`#22d3ee`) with calibrated horizontal timebase
-- **Per-Channel Readouts**: Displays live frequency estimates alongside each active trace
-- **Timebase Synchronization**: Locks time window to the fastest active clock signal across all 16 channels
-
----
 
 ## 🔌 Circuit Examples Gallery
 

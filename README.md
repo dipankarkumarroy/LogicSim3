@@ -1,186 +1,504 @@
 <div align="center">
 
+<img src="assets/banners/hero_banner.png" alt="LogicSim3 Banner" width="100%" style="border-radius: 8px; margin-bottom: 16px;" />
+
 # ⚡ LogicSim3
 
 ### Build, wire, and simulate digital logic — right in your browser.
 
-A canvas-based logic circuit workbench for exploring gates, arithmetic, sequential logic, 74xx ICs, and digital signals. No install or build step is required: serve the static files and open the app.
+A modern, high-performance HTML5 canvas digital logic workbench. Design and explore boolean gates, multi-bit arithmetic, sequential state machines, authentic 74xx DIP ICs, and live digital instrumentation with zero installation and zero dependencies.
 
-[**▶ Open LogicSim3**](https://dipankarkumarroy.github.io/LogicSim3/) · [**Explore example circuits**](#example-circuits) · [**Run locally**](#run-locally)
+[**▶ Launch Live App**](https://dipankarkumarroy.github.io/LogicSim3/) · [**Output Instruments Gallery**](#-output-instruments--visualizers-gallery) · [**Circuit Examples Gallery**](#-circuit-examples-gallery) · [**Run Locally**](#-run-locally)
 
-![JavaScript](https://img.shields.io/badge/JavaScript-vanilla-F7DF1E?logo=javascript&logoColor=111)
-![HTML](https://img.shields.io/badge/UI-HTML5-E34F26?logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/styles-CSS3-1572B6?logo=css3&logoColor=white)
-![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-222?logo=github)
+[![JavaScript Vanilla](https://img.shields.io/badge/JavaScript-Vanilla%20ES6+-F7DF1E?logo=javascript&logoColor=111)](js/)
+[![HTML5 Canvas](https://img.shields.io/badge/Engine-HTML5%20Canvas-E34F26?logo=html5&logoColor=white)](index.html)
+[![CSS3 Dark](https://img.shields.io/badge/Theme-Dark%20Workbench-1572B6?logo=css3&logoColor=white)](st1.css)
+[![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero%20(No%20NPM)-00C853)](index.html)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222?logo=github)](https://dipankarkumarroy.github.io/LogicSim3/)
+
+<br />
+
+<img src="assets/banners/hero_showcase.gif" alt="LogicSim3 Workbench Simulation Live Showcase" width="100%" style="border-radius: 8px; border: 1px solid #3b82f6; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+
+<sub>*Live interactive simulation running a synchronous counter, clock pulse generator, logic gates, hex display, CRT oscilloscope, and 16-channel logic analyzer.*</sub>
+
+<p align="center">
+  <a href="assets/banners/hero_showcase.mp4"><b>▶ Watch High-Definition Video Demo (MP4)</b></a> ·
+  <a href="assets/banners/hero_showcase.png"><b>View High-Res Static Frame (PNG)</b></a>
+</p>
 
 </div>
 
 ---
 
-## At a glance
+## 📑 Table of Contents
 
-LogicSim3 is a digital logic simulator and visual learning tool. Assemble circuits on an interactive canvas, run them live, and inspect outputs as logic levels, displays, or waveforms. The project is implemented with browser-native HTML, CSS, JavaScript, and Canvas—there is no framework, package manager, or compilation stage.
+- [⚡ At a Glance](#-at-a-glance)
+- [📊 Output Instruments & Visualizers Gallery](#-output-instruments--visualizers-gallery)
+  - [1. Indicator Light (`LIGHT`)](#1-indicator-light-light)
+  - [2. Polarity-Aware LED (`LED`)](#2-polarity-aware-led-led)
+  - [3. 4-Bit Hexadecimal Display (`HEX_DISPLAY`)](#3-4-bit-hexadecimal-display-hex_display)
+  - [4. Multi-Segment LED Bar Graph (`BAR_GRAPH`)](#4-multi-segment-led-bar-graph-bar_graph)
+  - [5. Multi-Bit Binary Digit Readout (`BITS_OUT`)](#5-multi-bit-binary-digit-readout-bits_out)
+  - [6. 8x8 Multiplexed LED Matrix (`LED_MATRIX`)](#6-8x8-multiplexed-led-matrix-led_matrix)
+  - [7. Real-Time Oscilloscope (`SCOPE`)](#7-real-time-oscilloscope-scope)
+  - [8. 16-Channel Logic Analyzer (`ANALYZER`)](#8-16-channel-logic-analyzer-analyzer)
+- [🔌 Circuit Examples Gallery](#-circuit-examples-gallery)
+  - [1. 1-Bit Gate-Level Full Adder](#1-1-bit-gate-level-full-adder)
+  - [2. 4-Bit Synchronous Counter + Analyzer](#2-4-bit-synchronous-counter--analyzer)
+  - [3. 4-Bit JK Ripple Counter with Scope & Hex](#3-4-bit-jk-ripple-counter-with-scope--hex)
+  - [4. 4-Bit Arithmetic Adder + DIP Switches & Hex](#4-4-bit-arithmetic-adder--dip-switches--hex)
+  - [5. 4:1 Multiplexer & 2-to-4 Decoder with Bar Graph](#5-41-multiplexer--2-to-4-decoder-with-bar-graph)
+  - [6. SN7408 Quad 2-Input AND Gate IC](#6-sn7408-quad-2-input-and-gate-ic)
+  - [7. Complete Logic Gates Comparison Suite](#7-complete-logic-gates-comparison-suite)
+- [🧩 Supported Component Catalog](#-supported-component-catalog)
+- [🏗 Architecture & Simulation Engine](#-architecture--simulation-engine)
+- [💻 Run Locally](#-run-locally)
+- [🎮 Canvas Controls & Keyboard Shortcuts](#-canvas-controls--keyboard-shortcuts)
+- [🚀 Deployment](#-deployment)
+- [🤝 Contributing](#-contributing)
 
-## What you can build
+---
 
-| Circuit area | Available components and examples |
-| --- | --- |
-| **Inputs & power** | VCC, GND, switches, momentary buttons, clocks, DIP switches |
-| **Logic** | AND, OR, NOT, NAND, NOR, XOR, XNOR |
-| **Combinational blocks** | Multiplexer, demultiplexer, decoder |
-| **Arithmetic** | Half/full adders and subtractors; 4- and 8-bit adders/subtractors; 2- and 4-bit multipliers; 4-bit divider |
-| **Sequential logic** | D, resettable D, T, JK, and SR flip-flops |
-| **74xx ICs** | 7400, 7402, 7404, 7408, 7432, 7483, 7486, 74150, 74151 |
-| **Outputs & instruments** | Light, polarity-aware LED, hexadecimal display, bar graph, bit output, LED matrix, oscilloscope, logic analyzer |
-| **Analysis & editing** | Truth-table generator, circuit thumbnails, labels, text annotations, undo/redo, copy/paste, rotate, zoom/pan, JSON import/export |
+## ⚡ At a Glance
 
-## Graphical examples
+LogicSim3 provides a hands-on digital electronics learning laboratory directly in your browser. It simulates continuous electrical signal propagation across interconnected component pins, renders glowing high/low logic paths, detects electrical contention (short circuits), and includes benchtop analysis instruments.
 
-### Full-adder signal path
+### Key Highlights
+- **100% Native Browser Execution**: Written in clean Vanilla ES6+ JavaScript and HTML5 Canvas. No build tools, Webpack, Node.js, or package managers required.
+- **Signal-Glow Wires**: Active **HIGH** (+5V) signals radiate with an emerald green neon glow (`#4ade80`), while **LOW** (0V/GND) wires remain a muted dark gray (`#4b5563`).
+- **Comprehensive Component Library**: Power sources, pushbuttons, toggle switches, clocks, logic gates, arithmetic blocks, sequential latches & flip-flops, and DIP-packaged 74xx TTL ICs.
+- **Laboratory Grade Instrumentation**: Embedded single-channel digital oscilloscope with automatic frequency measurement, and a 16-channel timing logic analyzer.
+- **Circuit Analysis**: Automated truth table generator with sub-circuit group isolation and canvas preview thumbnails.
+- **Zero Lock-In**: Save, import, and share circuit files directly in human-readable JSON format, or load them instantaneously through URL hash fragments.
 
-This schematic illustrates the gate-level full-adder example shipped in [`Examples/full_adder.json`](Examples/full_adder.json). Two XOR gates produce the sum; two AND gates and an OR gate produce carry-out.
+---
 
+## 📊 Output Instruments & Visualizers Gallery
+
+LogicSim3 includes 8 distinct output visualizers and instruments designed to inspect logic levels, binary words, alphanumeric data, and high-speed clock transitions. Every output component below features an interactive animated simulation preview, high-resolution static graphic, and dedicated video demonstration.
+
+---
+
+### 1. Indicator Light (`LIGHT`)
+
+The indicator light models an incandescent lamp or single-ended logic probe. When the input reaches logic level HIGH (1 / +5V), the lamp illuminates with a warm multi-layer golden-yellow radial halo. At logic level LOW (0 / 0V), it remains an unlit dark charcoal bezel.
+
+| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
+| :---: | :---: | :---: |
+| <img src="assets/outputs/light_indicator.gif" alt="Indicator Light Simulation" width="340" /> | <img src="assets/outputs/light_indicator.png" alt="Indicator Light Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/light_indicator.mp4) |
+
+- **Type ID**: `LIGHT`
+- **Port Configuration**: 1 Input Port (Western side)
+- **Active State**: HIGH (1 / +5V) triggers `#facc15` illumination with outer radial blur
+- **Inactive State**: LOW (0 / 0V) renders dark `#1e1e1e` body with `#374151` rim
+- **Common Usage**: Simple logic state verification, truth table generation, gate test benches
+
+---
+
+### 2. Polarity-Aware LED (`LED`)
+
+Unlike simple lamps, the polarity-aware LED models an actual semiconductor diode junction. It features separate Anode (`+`, Pin 0) and Cathode (`-`, Pin 1) leads. Conduction occurs only when forward biased—requiring a HIGH potential on the Anode and a true LOW/GND return path on the Cathode.
+
+| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
+| :---: | :---: | :---: |
+| <img src="assets/outputs/polarity_led.gif" alt="Polarity LED Simulation" width="340" /> | <img src="assets/outputs/polarity_led.png" alt="Polarity LED Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/polarity_led.mp4) |
+
+- **Type ID**: `LED`
+- **Port Configuration**: 2 Input Ports (Pin 0: Anode `+`, Pin 1: Cathode `-`)
+- **Forward Bias Condition**: `inputState[0] === 1 && inputContention[1].hasLow`
+- **Visual Output**: Domed lens with flat cathode rim, glowing crimson red (`#ef4444`) with photon halo
+- **Reverse Bias / Floating**: Completely dark burgundy (`#450a0a`), modeling diode cutoff behavior
+
+---
+
+### 3. 4-Bit Hexadecimal Display (`HEX_DISPLAY`)
+
+An authentic 7-segment style numeric digital readout with high-contrast black enclosure. Four binary input pins weighted 1, 2, 4, and 8 are decoded in real-time to render hexadecimal digits `0` through `9` and `A` through `F`.
+
+| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
+| :---: | :---: | :---: |
+| <img src="assets/outputs/hex_display.gif" alt="Hex Display Simulation" width="340" /> | <img src="assets/outputs/hex_display.png" alt="Hex Display Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/hex_display.mp4) |
+
+- **Type ID**: `HEX_DISPLAY`
+- **Port Configuration**: 4 Binary Inputs (Weighted: Pin 0 = 1, Pin 1 = 2, Pin 2 = 4, Pin 3 = 8)
+- **Display Range**: `0x0` (0) to `0xF` (15)
+- **Styling**: Deep black background (`#000`), bold monospace ruby-red phosphor numerals (`#ef4444`)
+- **Common Usage**: Binary counters, 4-bit ALUs, adder output readouts, register file state inspect
+
+---
+
+### 4. Multi-Segment LED Bar Graph (`BAR_GRAPH`)
+
+A multi-segment vertical ladder display modeling industrial level meters, volume meters, and bus indicators. Each segment illuminates in glowing red when its corresponding input is asserted HIGH.
+
+| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
+| :---: | :---: | :---: |
+| <img src="assets/outputs/bar_graph.gif" alt="Bar Graph Simulation" width="340" /> | <img src="assets/outputs/bar_graph.png" alt="Bar Graph Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/bar_graph.mp4) |
+
+- **Type ID**: `BAR_GRAPH`
+- **Configurable Bit Width**: Default 10 segments (configurable to 4, 8, 10, or 16 bits)
+- **Visual Indicators**: Individual segmented cells with index numbering `0` through `N-1`
+- **Glow Effects**: Active bars illuminate with crimson red core (`#ef4444`) and subtle diffusion bloom
+- **Common Usage**: Decoder outputs, thermometer codes, priority encoder visualization, signal bus monitor
+
+---
+
+### 5. Multi-Bit Binary Digit Readout (`BITS_OUT`)
+
+The `BITS_OUT` component provides a crisp, tile-based numeric binary representation of bus lines. Each bit is rendered within a high-contrast white card showing bold black digital `0` or `1` numerals, complete with MSB (Most Significant Bit) and LSB (Least Significant Bit) labels.
+
+| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
+| :---: | :---: | :---: |
+| <img src="assets/outputs/bits_out.gif" alt="Bits Out Simulation" width="340" /> | <img src="assets/outputs/bits_out.png" alt="Bits Out Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/bits_out.mp4) |
+
+- **Type ID**: `BITS_OUT`
+- **Configurable Bit Width**: 1 to 32 parallel bits (default 4 or 8 bits)
+- **Input Connections**: Top-mounted pin terminals corresponding to each parallel bit lane
+- **Orientation**: Automatic MSB on the far left, LSB on the far right
+- **Common Usage**: Parallel arithmetic testing, accumulator inspection, memory address line monitoring
+
+---
+
+### 6. 8x8 Multiplexed LED Matrix (`LED_MATRIX`)
+
+An 8x8 matrix display with rounded bezel modeling real-world multiplexed dot-matrix LED displays. The matrix is controlled via row anode pins ($A_0..A_7$) and column cathode pins ($C_0..C_7$). An LED dot turns ON when its row is driven HIGH and its column is pulled LOW.
+
+| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
+| :---: | :---: | :---: |
+| <img src="assets/outputs/led_matrix.gif" alt="LED Matrix Simulation" width="340" /> | <img src="assets/outputs/led_matrix.png" alt="LED Matrix Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/led_matrix.mp4) |
+
+- **Type ID**: `LED_MATRIX`
+- **Dimensions**: Configurable $N \times N$ matrix (default $8 \times 8 = 64$ LEDs)
+- **Pin Mapping**: $N$ Row Anodes ($A_0..A_{n-1}$, active HIGH) on Western side; $N$ Column Cathodes ($C_0..C_{n-1}$, active LOW) on Southern side
+- **Conduction Rule**: LED $(r, c)$ illuminates if and only if $Row_r == 1$ and $Col_c == 0$
+- **Common Usage**: Multiplexed display scanning, scrolling text character generators, graphical sprites
+
+---
+
+### 7. Real-Time Oscilloscope (`SCOPE`)
+
+An oscilloscope instrument that samples digital signal transitions in real-time, advances a continuous scrolling square-wave trace on an phosphor CRT screen, and measures clock period to compute live frequency readouts.
+
+| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
+| :---: | :---: | :---: |
+| <img src="assets/outputs/scope.gif" alt="Oscilloscope Simulation" width="340" /> | <img src="assets/outputs/scope.png" alt="Oscilloscope Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/scope.mp4) |
+
+- **Type ID**: `SCOPE`
+- **CRT Screen**: Dark grid enclosure with green graticule calibration marks
+- **Trace Rendering**: Phosphor emerald square wave (`#4ade80`) with edge transitions
+- **Auto-Ranging Timebase**: Synchronizes window duration to detected input period ($4 \times T_{period}$, clamped between $0.1\text{ms}$ and $2000\text{ms}$)
+- **Frequency Counter**: Automatically calculates $f = \frac{1000}{\Delta t_{ms}}\text{ Hz}$ on rising edges and renders digital readout in the upper-right corner
+
+---
+
+### 8. 16-Channel Logic Analyzer (`ANALYZER`)
+
+The logic analyzer provides a benchtop multi-line timing instrument. With 16 synchronized digital input channels (`0` through `F`), it records state transitions simultaneously and visualizes complex timing relationships, bus transitions, and clock divider cascades.
+
+| Animated Simulation (GIF) | Static Schematic (PNG) | Video Example (MP4) |
+| :---: | :---: | :---: |
+| <img src="assets/outputs/analyzer.gif" alt="Logic Analyzer Simulation" width="340" /> | <img src="assets/outputs/analyzer.png" alt="Logic Analyzer Preview" width="340" /> | [▶ Watch Video (MP4)](assets/outputs/analyzer.mp4) |
+
+- **Type ID**: `ANALYZER`
+- **Channels**: 16 Independent Digital Input Ports (Hexadecimal labels `0` through `F`)
+- **Waveform Traces**: Synchronized cyan timing lanes (`#22d3ee`) with calibrated horizontal timebase
+- **Per-Channel Readouts**: Displays live frequency estimates alongside each active trace
+- **Timebase Synchronization**: Locks time window to the fastest active clock signal across all 16 channels
+
+---
+
+## 🔌 Circuit Examples Gallery
+
+LogicSim3 includes a curated collection of pre-built, importable digital circuits located in the [`Examples/`](Examples/) directory. You can load any of these circuits directly from the in-app **Examples** menu or by appending `#Examples/<filename>.json` to the URL.
+
+---
+
+### 1. 1-Bit Gate-Level Full Adder
+
+A classic digital arithmetic circuit demonstrating multi-input addition. Two XOR gates produce the Sum bit; two AND gates and an OR gate compute the Carry-Out bit.
+
+| Animated Simulation (GIF) | Static Schematic (PNG) | Circuit File & Video |
+| :---: | :---: | :---: |
+| <img src="assets/circuits/full_adder.gif" alt="Full Adder Simulation" width="340" /> | <img src="assets/circuits/full_adder.png" alt="Full Adder Schematic" width="340" /> | [`Examples/full_adder.json`](Examples/full_adder.json)<br />[▶ Watch Video (MP4)](assets/circuits/full_adder.mp4) |
+
+#### Schematic Flow
 ```mermaid
 flowchart LR
-    A([A]) --> X1[XOR]
+    A([A]) --> X1[XOR 1]
     B([B]) --> X1
-    X1 --> X2[XOR]
+    X1 --> X2[XOR 2]
     Cin([Cin]) --> X2
-    X2 --> Sum((Sum))
-    A --> G1[AND]
-    B --> G1
-    X1 --> G2[AND]
-    Cin --> G2
-    G1 --> O1[OR]
-    G2 --> O1
-    O1 --> Cout((Carry out))
+    X2 --> Sum((Sum Light))
+    
+    A --> A1[AND 1]
+    B --> A1
+    X1 --> A2[AND 2]
+    Cin --> A2
+    A1 --> O1[OR 1]
+    A2 --> O1
+    O1 --> Cout((Cout Light))
 ```
 
-| A | B | Cin | Sum | Carry out |
+#### Full Adder Truth Table
+| A | B | Cin | Sum ($A \oplus B \oplus Cin$) | Carry Out ($AB + Cin(A \oplus B)$) |
 | :-: | :-: | :-: | :-: | :-: |
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 1 | 0 |
-| 0 | 1 | 0 | 1 | 0 |
-| 0 | 1 | 1 | 0 | 1 |
-| 1 | 0 | 0 | 1 | 0 |
-| 1 | 0 | 1 | 0 | 1 |
-| 1 | 1 | 0 | 0 | 1 |
-| 1 | 1 | 1 | 1 | 1 |
+| 0 | 0 | 0 | **0** | **0** |
+| 0 | 0 | 1 | **1** | **0** |
+| 0 | 1 | 0 | **1** | **0** |
+| 0 | 1 | 1 | **0** | **1** |
+| 1 | 0 | 0 | **1** | **0** |
+| 1 | 0 | 1 | **0** | **1** |
+| 1 | 1 | 0 | **0** | **1** |
+| 1 | 1 | 1 | **1** | **1** |
 
-The simulator can generate truth tables for connected groups that include supported inputs and outputs. Its analysis modal also renders a small canvas thumbnail of each eligible circuit group.
+---
 
-### Output and instrument gallery
+### 2. 4-Bit Synchronous Counter + Analyzer
 
-The simulator draws these outputs directly on its canvas. The examples below describe the available visualizations; they are not screenshot assets.
+A synchronous binary up-counter constructed with 4 edge-triggered D flip-flops, steering logic gates, and a master clock generator, wired directly into a 16-channel logic analyzer to verify simultaneous register state changes.
 
-| Output | What it visualizes |
-| --- | --- |
-| **Light / LED** | A lit indicator for a high input; the LED also models polarity and requires its return connection. |
-| **Hex display** | A hexadecimal digit derived from a multi-bit input. |
-| **Bar graph / Bits Out** | Multi-bit values as individual visual bit levels. |
-| **LED matrix** | A grid of individually driven LEDs. |
-| **Scope** | A scrolling digital trace with an estimated frequency readout. |
-| **Analyzer** | Multiple digital signal traces for comparing circuit signals over time. |
+| Animated Simulation (GIF) | Static Schematic (PNG) | Circuit File & Video |
+| :---: | :---: | :---: |
+| <img src="assets/circuits/counter_4bit.gif" alt="4-Bit Counter Simulation" width="340" /> | <img src="assets/circuits/counter_4bit.png" alt="4-Bit Counter Schematic" width="340" /> | [`Examples/counter.json`](Examples/counter.json)<br />[▶ Watch Video (MP4)](assets/circuits/counter_4bit.mp4) |
 
-### Waveform concept
+- **Components**: 4 D Flip-Flops, AND Gates, XOR Gates, Master Clock, 16-Ch Logic Analyzer
+- **Behavior**: All flip-flops trigger simultaneously on the rising clock edge, eliminating ripple propagation skew
+- **Analyzer Output**: Channels $Q_0$ through $Q_3$ display binary division ratios ($f/2, f/4, f/8, f/16$)
 
-Scope and Analyzer record signal transitions and render square-wave traces. This small, static timing sketch explains the kind of signal being inspected; the live trace is drawn in the app.
+---
+
+### 3. 4-Bit JK Ripple Counter with Scope & Hex
+
+An asynchronous binary ripple counter built from cascaded negative-edge triggered JK flip-flops. Each stage has $J=1$ and $K=1$ configured in toggle mode. The inverted output $Q'$ of each stage clocks the subsequent flip-flop, driving both a Hex Display and an Oscilloscope.
+
+| Animated Simulation (GIF) | Static Schematic (PNG) | Circuit File & Video |
+| :---: | :---: | :---: |
+| <img src="assets/circuits/jk_ripple_counter.gif" alt="JK Ripple Counter Simulation" width="340" /> | <img src="assets/circuits/jk_ripple_counter.png" alt="JK Ripple Counter Schematic" width="340" /> | [`Examples/jk_ripple_counter.json`](Examples/jk_ripple_counter.json)<br />[▶ Watch Video (MP4)](assets/circuits/jk_ripple_counter.mp4) |
+
+- **Components**: 4 JK Flip-Flops, Clock, VCC Power, Hex Display, Scope, Binary Readout
+- **Counting Sequence**: `0x0`, `0x1`, `0x2`, ..., `0xE`, `0xF` (0 to 15 decimal rollover)
+- **Oscilloscope Inspection**: Measures input clock against stage 0 toggle frequency
+
+---
+
+### 4. 4-Bit Arithmetic Adder + DIP Switches & Hex
+
+A multi-bit parallel arithmetic testbench. Two 4-bit DIP switches provide inputs for Operands $A$ and $B$. A 4-bit parallel adder block computes the binary sum, driving both a `BITS_OUT` parallel readout, a `HEX_DISPLAY` result, and an overflow Carry lamp.
+
+| Animated Simulation (GIF) | Static Schematic (PNG) | Circuit File & Video |
+| :---: | :---: | :---: |
+| <img src="assets/circuits/adder_4bit_hex.gif" alt="4-Bit Adder Simulation" width="340" /> | <img src="assets/circuits/adder_4bit_hex.png" alt="4-Bit Adder Schematic" width="340" /> | [`Examples/adder_4bit_hex.json`](Examples/adder_4bit_hex.json)<br />[▶ Watch Video (MP4)](assets/circuits/adder_4bit_hex.mp4) |
+
+- **Operands**: $A[3..0]$ (0..15) and $B[3..0]$ (0..15) configured via dual DIP switch banks
+- **Outputs**: 4-bit sum ($S[3..0]$) decoded onto Hexadecimal Display, with Carry-Out driving an overflow indicator light
+- **Interactive Verification**: Try setting $A = 7$ and $B = 9$ to observe Sum $= 0$ and Carry $= 1$ ($16_{10} = 0x10$)
+
+---
+
+### 5. 4:1 Multiplexer & 2-to-4 Decoder with Bar Graph
+
+Demonstrates combinational data routing and address decoding. Two select switches ($S_0, S_1$) drive a 2-to-4 active-high decoder (asserting exactly one line $Y_0..Y_3$) and simultaneously configure a 4:1 Multiplexer steering data into a multi-segment LED Bar Graph.
+
+| Animated Simulation (GIF) | Static Schematic (PNG) | Circuit File & Video |
+| :---: | :---: | :---: |
+| <img src="assets/circuits/mux_decoder.gif" alt="MUX & Decoder Simulation" width="340" /> | <img src="assets/circuits/mux_decoder.png" alt="MUX & Decoder Schematic" width="340" /> | [`Examples/mux_decoder_demo.json`](Examples/mux_decoder_demo.json)<br />[▶ Watch Video (MP4)](assets/circuits/mux_decoder.mp4) |
+
+- **Components**: 4:1 Multiplexer, 2:4 Line Decoder, 2 Select Switches, 4 Data Inputs, LED Bar Graph
+- **Decoding Rule**: $[S_1, S_0] = [0, 0] \rightarrow Y_0$; $[0, 1] \rightarrow Y_1$; $[1, 0] \rightarrow Y_2$; $[1, 1] \rightarrow Y_3$
+- **Bar Graph Feedback**: Visualizes one-hot channel assertion and data path transmission
+
+---
+
+### 6. SN7408 Quad 2-Input AND Gate IC
+
+Demonstrates authentic TTL 74xx Dual-In-Line (DIP-14) integrated circuit emulation. The IC requires active power connections on Pin 14 ($V_{CC} = +5V$) and Pin 7 ($GND = 0V$) before its internal AND gates will operate, driving a polarity-aware red LED.
+
+| Animated Simulation (GIF) | Static Schematic (PNG) | Circuit File & Video |
+| :---: | :---: | :---: |
+| <img src="assets/circuits/ic7408_and.gif" alt="7408 IC Simulation" width="340" /> | <img src="assets/circuits/ic7408_and.png" alt="7408 IC Schematic" width="340" /> | [`Examples/ic7408_and_gate.json`](Examples/ic7408_and_gate.json)<br />[▶ Watch Video (MP4)](assets/circuits/ic7408_and.mp4) |
+
+- **IC Model**: Standard Texas Instruments SN7408N DIP-14 pinout
+- **Power Rail Verification**: Pin 14 ($V_{CC}$) and Pin 7 ($GND$) are actively enforced by the engine
+- **Gate 1 Pinout**: Inputs on Pin 1 ($1A$) and Pin 2 ($1B$), output on Pin 3 ($1Y$)
+- **Output Indicator**: Polarity-aware LED with forward-biased return path to ground
+
+---
+
+### 7. Complete Logic Gates Comparison Suite
+
+A parallel test suite evaluating all 7 fundamental boolean logic gates under identical input conditions. Toggle switches $A$ and $B$ simultaneously drive AND, OR, NOT, XOR, NAND, NOR, and XNOR gates, with live indicator lights displaying the boolean result.
+
+| Animated Simulation (GIF) | Static Schematic (PNG) | Circuit File & Video |
+| :---: | :---: | :---: |
+| <img src="assets/circuits/logic_gates.gif" alt="Logic Gates Comparison Simulation" width="340" /> | <img src="assets/circuits/logic_gates.png" alt="Logic Gates Comparison Schematic" width="340" /> | [`Examples/logic_gates_demo.json`](Examples/logic_gates_demo.json)<br />[▶ Watch Video (MP4)](assets/circuits/logic_gates.mp4) |
+
+- **Gates Evaluated**: `AND`, `OR`, `NOT`, `XOR`, `NAND`, `NOR`, `XNOR`
+- **Interactive Verification**: Quickly observe De Morgan's equivalences and inverted gate outputs
+- **Truth Table Integration**: Open the in-app **Table** modal to auto-generate the complete truth table
+
+---
+
+## 🧩 Supported Component Catalog
+
+| Category | Component Identifier | Description & Ports |
+| :--- | :--- | :--- |
+| **Power & Ground** | `VCC`, `GND` | Fixed $+5\text{V}$ logic HIGH source and $0\text{V}$ ground reference sink. |
+| **User Inputs** | `SWITCH`, `BUTTON` | Bistable toggle switch and momentary push button with visual state slider. |
+| **Signal Generators** | `CLOCK` | Square-wave pulse source with configurable frequency ($0.1\text{ Hz}$ to $1000\text{ Hz}$). |
+| **Bus Inputs** | `DIP_SWITCH` | Multi-lane dual-in-line switch bank (configurable 4, 8, 16 bits). |
+| **Basic Gates** | `AND`, `OR`, `NOT` | Standard boolean gates with IEEE compliant schematic outlines. |
+| **Inverted Gates** | `NAND`, `NOR`, `XNOR` | Inverting boolean gates equipped with output inversion bubbles. |
+| **Exclusive Gates** | `XOR` | Dual-input exclusive OR gate for parity and addition circuits. |
+| **Multiplexers** | `MUX`, `DEMUX` | $2^n:1$ data selector and $1:2^n$ data distributor blocks. |
+| **Decoders** | `DECODER` | Binary $n$-to-$2^n$ one-hot decoder block. |
+| **Adders & Subtractors** | `HALF_ADDER`, `FULL_ADDER`, `ADDER_4`, `ADDER_8` | 1-bit, 4-bit, and 8-bit parallel arithmetic addition blocks with carry handling. |
+| **Multipliers & Dividers**| `MULTIPLIER_2`, `MULTIPLIER_4`, `DIVIDER_4` | Hardware combinational multiplication and division components. |
+| **Flip-Flops & Latches** | `D_FF`, `T_FF`, `JK_FF`, `SR_FF` | Edge-triggered sequential memory elements with clock arrow and inverted outputs. |
+| **74xx Series ICs** | `7400`, `7402`, `7404`, `7408`, `7432`, `7483`, `7486`, `74150`, `74151` | Authentic DIP-packaged TTL integrated circuits with standard pinouts and rail verification. |
+| **Visual Indicators** | `LIGHT`, `LED`, `BAR_GRAPH` | Incandescent indicator lamp, polarity-aware LED, and 10-segment LED ladder. |
+| **Numeric Readouts** | `HEX_DISPLAY`, `BITS_OUT` | 7-segment ruby-red hex display and multi-bit parallel binary digit cards. |
+| **Matrix Displays** | `LED_MATRIX` | $N \times N$ multiplexed dot-matrix display with row anodes and column cathodes. |
+| **Benchtop Instruments**| `SCOPE`, `ANALYZER` | CRT square-wave oscilloscope and 16-channel timing logic analyzer. |
+| **Schematic Tools** | `TEXT` | Movable schematic text annotations with customizable font sizes and colors. |
+
+---
+
+## 🏗 Architecture & Simulation Engine
+
+The simulator is built with a decoupled, modular Vanilla JavaScript architecture:
 
 ```text
-Clock   _|‾|_|‾|_|‾|_|‾|_
-Q       ___|‾‾‾‾|___|‾‾‾‾
-          time ──────────▶
-```
-
-## Example circuits
-
-Choose **Examples** in the toolbar to load a sample circuit, or open a JSON circuit directly using the URL-hash loader.
-
-| Example | What to explore | Circuit file |
-| --- | --- | --- |
-| **Basic Logic Gates** | Compare AND, OR, XOR, and NAND with switches, lights, and the truth-table tool. | [`Examples/logic_gates_demo.json`](Examples/logic_gates_demo.json) |
-| **1-Bit Full Adder** | Follow sum and carry through a gate-level circuit. | [`Examples/full_adder.json`](Examples/full_adder.json) |
-| **4-Bit Counter** | Observe a clocked counter built from flip-flops and gates; inspect its analyzer signals. | [`Examples/counter.json`](Examples/counter.json) |
-| **4-Bit Adder + Hex Display** | Set two DIP-switch operands and inspect the result and carry. | [`Examples/adder_4bit_hex.json`](Examples/adder_4bit_hex.json) |
-| **4-Bit JK Ripple Counter** | Explore a JK-flip-flop counter with a hexadecimal display and scope. | [`Examples/jk_ripple_counter.json`](Examples/jk_ripple_counter.json) |
-| **4:1 MUX & 2-to-4 Decoder** | See data selection and one-hot decoding with switch inputs and a bar graph. | [`Examples/mux_decoder_demo.json`](Examples/mux_decoder_demo.json) |
-| **7408 Quad AND IC** | Power a 7408 and test an AND output with a polarity-aware LED. | [`Examples/ic7408_and_gate.json`](Examples/ic7408_and_gate.json) |
-
-The sample list is maintained in [`examples.json`](examples.json). Circuit files are JSON and can also be saved from the app, imported, or loaded by URL hash. For example, append `#Examples/full_adder.json` to the app URL.
-
-## How the simulator is organized
-
-```text
-index.html                 App layout, toolbar, component palette, script loading
-ui.js                      Sidebar, fullscreen, and example-browser UI
-st1.css, st2.css, st3.css   Icon styles, layout styles, generated utility styles
-examples.json              Example titles, descriptions, and circuit links
-Examples/                  Saved, importable JSON circuit designs
+index.html                  Layout, component sidebar, toolbar, canvas container
+ui.js                       Sidebar category collapse, fullscreen toggle, example modal
+st1.css, st2.css, st3.css    Icons, workbench layout, typography, UI styling
+examples.json               Catalog of built-in circuit examples with metadata
+Examples/                   Pre-built JSON circuit designs
+assets/
+  banners/                  Hero banner and animated workbench showcase (.png, .gif, .mp4)
+  outputs/                  Individual output visualizer media (.png, .gif, .mp4)
+  circuits/                 Individual circuit example media (.png, .gif, .mp4)
+scripts/
+  generate_all_assets.py    Python media pipeline (OpenCV, Pillow) to render images & videos
 js/
-  main.js                  Creates the LogicSimulator after DOM content loads
+  main.js                   Application entry point; instantiates LogicSimulator on DOM ready
   components/
-    BaseComponent.js       Shared component ports, state, geometry, and drawing helpers
-    ComponentRegistry.js   Maps circuit type identifiers to component classes
-    inputs/ gates/         Power, switches, clock, and Boolean gates
-    plexers/ arithmetic/   Multiplexers, decoder, and arithmetic blocks
-    flipflops/ ics/        Stateful logic and 74xx DIP ICs
-    outputs/ analysis/     Indicators, displays, scopes, and analyzer
-    tools/                 Canvas text annotations
+    BaseComponent.js        Shared port geometry, coordinate transforms, selection & drawing
+    ComponentRegistry.js    Extensible registry mapping type strings to component classes
+    inputs/                 Power sources (VCC/GND), switches, buttons, clocks, DIP switches
+    gates/                  LogicGateComponent (AND, OR, NOT, NAND, NOR, XOR, XNOR)
+    plexers/                Multiplexer, Demultiplexer, Decoder
+    arithmetic/             Adders, Subtractors, Multipliers, Dividers
+    flipflops/              D, T, JK, and SR flip-flops with clock edge detection
+    ics/                    DIP-14 and DIP-16 physical 74xx IC packages
+    outputs/                Light, LED, Hex Display, Bar Graph, Bits Out, LED Matrix
+    analysis/               Scope, Logic Analyzer, WaveformChannel circular buffer
+    tools/                  Canvas text annotations
   simulator/
-    LogicSimulator.js      Simulation loop, propagation, state and orchestration
-    CanvasRenderer.js      Canvas grid, wires, components, and visual indicators
-    InputHandler.js        Canvas interaction and editing events
-    Serializer.js          JSON import/export and URL-hash circuit loading
-    TruthTableGenerator.js Connected-circuit analysis and truth-table rendering
-    HistoryManager.js      Undo/redo history
-    Geometry.js            Shared geometry helpers
+    LogicSimulator.js       Main simulation loop, wire propagation, electrical contention
+    CanvasRenderer.js       World-to-screen matrix transform, grid, wire glow, selection box
+    InputHandler.js         Mouse/touch interactions, dragging, wire routing, shortcuts
+    Serializer.js           JSON circuit serialization, URL hash loader, file import/export
+    TruthTableGenerator.js  Circuit graph traversal, input permutation, truth table modal
+    HistoryManager.js       Undo/redo transaction stack
+    Geometry.js             Orthogonal wire routing and geometric collision utilities
 ```
 
-### Runtime flow
+### Runtime Propagation Flow
+1. **RequestAnimationFrame Loop**: `LogicSimulator.update()` ticks the simulation clock and advances oscilloscope/analyzer buffers.
+2. **Propagation Pass (`runPropagationPass()`)**:
+   - Computes wire connection states from source component output ports.
+   - Updates input contention maps (`hasHigh`, `hasLow`) for every pin.
+   - Detects electrical short-circuits (e.g., competing HIGH and LOW drives on the same node), immediately pausing the simulation and flagging the contention site.
+   - Calls `calculate()` on all connected components to propagate logic outputs.
+3. **Canvas Rendering (`CanvasRenderer.draw()`)**:
+   - Applies viewport scale and pan offsets.
+   - Draws the background coordinate grid.
+   - Renders orthogonal wire paths with neon glow styling for asserted lines.
+   - Draws components, pin connection terminals, and floating labels.
 
-`js/main.js` creates `LogicSimulator` after the page loads. The simulator owns circuit state and advances its animation-frame loop; `runPropagationPass()` transfers wire values and asks components to calculate outputs. `CanvasRenderer` draws the grid, signal-colored wires, and components. Component classes register with `ComponentRegistry`, while `Serializer` and `TruthTableGenerator` handle circuit persistence and analysis.
+---
 
-## Run locally
+## 💻 Run Locally
 
-There is no build or dependency-install step. Because example circuits and the example catalog are fetched as JSON, use a local HTTP server rather than opening `index.html` as a `file://` URL.
+LogicSim3 requires **no build step, no compiler, and zero dependencies**. Because modern browsers restrict `fetch()` requests on `file:///` URLs (needed to load `examples.json` and JSON circuit files), serve the repository root with any lightweight static HTTP server:
 
+### Option 1: Python 3 (Recommended)
 ```bash
+# Clone the repository
 git clone https://github.com/dipankarkumarroy/LogicSim3.git
 cd LogicSim3
+
+# Start static HTTP server
 python3 -m http.server 8000
 ```
+Then navigate to: **`http://localhost:8000`**
 
-Then visit <http://localhost:8000> in a modern browser. If Python is unavailable, any static web server that serves the repository root will work.
+### Option 2: Node.js `npx serve`
+```bash
+npx serve .
+```
 
-### First circuit
+### Option 3: VS Code Live Server
+Right-click `index.html` in VS Code and select **"Open with Live Server"**.
 
-1. Start the local server and open the app.
-2. Select **Examples** and choose **1-Bit Full Adder**, or add switches, gates, and lights from the sidebar.
-3. Draw connections between component pins on the canvas.
-4. Use **Play** and **Pause** to control the simulation; toggle input switches to change the logic levels.
-5. Open **Table** to generate a truth table for an eligible connected circuit.
-6. Use **Save** to download a JSON circuit, or **Import** to load one.
+---
 
-## Interactions and behavior
+## 🎮 Canvas Controls & Keyboard Shortcuts
 
-- **Canvas:** Place, select, move, wire, and rotate components; pan and zoom to work on larger designs.
-- **Toolbar:** Create, save, and import circuits; browse examples; play/pause simulation; toggle labels and fullscreen; undo/redo; rotate or delete the selection.
-- **Context menu:** Access component or wire actions such as rename, label visibility, frequency/bit-size controls where supported, and delete.
-- **Safety feedback:** Conflicting HIGH/LOW drives are detected at inputs; the simulation pauses and marks the short-circuit location.
-- **Clocks and instruments:** Clock frequency is configurable; scopes/analyzers sample transitions during simulation and display frequency information.
+| Action | Shortcut / Gesture | Description |
+| :--- | :--- | :--- |
+| **Select / Move** | `Left Click` + Drag | Select components or drag them across the canvas grid. |
+| **Box Select** | `Click + Drag` on empty canvas | Create a rectangular selection marquee around multiple components. |
+| **Draw Wire** | `Click` on output pin $\rightarrow$ `Click` on input pin | Connects two ports with automatic orthogonal wire routing. |
+| **Pan Canvas** | `Right Click` + Drag or `Middle Click` | Pan the viewport across large schematics. |
+| **Zoom View** | `Mouse Wheel` | Zoom in and out centered on cursor position. |
+| **Rotate** | <kbd>R</kbd> or Toolbar Rotate | Rotate selected component by $90^\circ$ clockwise. |
+| **Delete** | <kbd>Delete</kbd> or <kbd>Backspace</kbd> | Delete selected components and attached wires. |
+| **Undo / Redo** | <kbd>Ctrl</kbd> + <kbd>Z</kbd> / <kbd>Ctrl</kbd> + <kbd>Y</kbd> | Revert or re-apply canvas editing transactions. |
+| **Copy / Paste** | <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> | Duplicate selected circuit sub-graphs. |
+| **Toggle Simulation**| Toolbar **Play / Pause** | Toggle active electrical signal propagation. |
+| **Truth Table** | Toolbar **Table** | Automatically generate and view truth table for connected circuits. |
+| **Context Menu** | `Right Click` on component | Configure bit-widths, frequencies, rename labels, or inspect pins. |
 
-## Deployment
+---
 
-The repository includes a GitHub Actions workflow at [`.github/workflows/static.yml`](.github/workflows/static.yml) that deploys the repository's static content to GitHub Pages when changes are pushed to `main`, and supports manual runs from Actions. The deployment requires GitHub Pages to be enabled and configured for the workflow in repository settings.
+## 🚀 Deployment
 
-## Contributing
+The repository includes a GitHub Actions workflow located at [`.github/workflows/static.yml`](.github/workflows/static.yml). Any push to the `main` branch automatically deploys the latest version to GitHub Pages:
 
-Improvements are welcome. Keep new component types consistent with the registry-based component structure, add or update example JSON when a feature benefits from a demo, and update this README when the UI or supported components change. There is currently no package manifest or automated test command in the repository.
+```yaml
+# Deploys static files to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+```
+
+To enable GitHub Pages for your fork:
+1. Navigate to **Settings** $\rightarrow$ **Pages** in your repository.
+2. Under **Build and deployment** $\rightarrow$ **Source**, choose **GitHub Actions**.
+
+---
+
+## 🤝 Contributing
+
+Contributions, feature suggestions, and new example circuits are always welcome!
+
+1. **Fork the Repository**
+2. **Create your Feature Branch**: `git checkout -b feature/awesome-component`
+3. **Add your Component**: Register it in `js/components/` following `BaseComponent` conventions.
+4. **Create an Example**: Save a demonstration circuit in `Examples/<your_example>.json` and register it in `examples.json`.
+5. **Update Media**: Run `python scripts/generate_all_assets.py` to regenerate graphics, GIFs, and videos.
+6. **Commit and Push**: `git commit -m "Add 4-bit Magnitude Comparator"` $\rightarrow$ `git push origin feature/awesome-component`
+7. **Open a Pull Request**
 
 ---
 
 <div align="center">
 
-Made by **D K Roy** · [Repository](https://github.com/dipankarkumarroy/LogicSim3)
+Made with ❤️ by **D K Roy** · [GitHub Repository](https://github.com/dipankarkumarroy/LogicSim3)
+
+<sub>LogicSim3 is open source under the MIT License.</sub>
 
 </div>

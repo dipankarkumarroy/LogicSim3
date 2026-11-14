@@ -1,0 +1,281 @@
+{
+  "scale": 1,
+  "offset": {
+    "x": 80,
+    "y": 40
+  },
+  "globalLabelsVisible": true,
+  "components": [
+    {
+      "type": "TEXT",
+      "x": 120,
+      "y": 40,
+      "id": "t1",
+      "w": 260,
+      "h": 24,
+      "name": "TEXT",
+      "frequency": 1,
+      "color": "#93c5fd",
+      "showLabel": true,
+      "bits": 4,
+      "text": "Basic Logic Gates Demo",
+      "fontSize": 22
+    },
+    {
+      "type": "SWITCH",
+      "x": 120,
+      "y": 140,
+      "id": "sw_a",
+      "w": 40,
+      "h": 40,
+      "name": "A",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "SWITCH",
+      "x": 120,
+      "y": 280,
+      "id": "sw_b",
+      "w": 40,
+      "h": 40,
+      "name": "B",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "AND",
+      "x": 300,
+      "y": 100,
+      "id": "g_and",
+      "w": 60,
+      "h": 40,
+      "name": "AND",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "OR",
+      "x": 300,
+      "y": 180,
+      "id": "g_or",
+      "w": 60,
+      "h": 40,
+      "name": "OR",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "XOR",
+      "x": 300,
+      "y": 260,
+      "id": "g_xor",
+      "w": 60,
+      "h": 40,
+      "name": "XOR",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NAND",
+      "x": 300,
+      "y": 340,
+      "id": "g_nand",
+      "w": 60,
+      "h": 40,
+      "name": "NAND",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "LIGHT",
+      "x": 480,
+      "y": 100,
+      "id": "l_and",
+      "w": 40,
+      "h": 40,
+      "name": "AND",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "LIGHT",
+      "x": 480,
+      "y": 180,
+      "id": "l_or",
+      "w": 40,
+      "h": 40,
+      "name": "OR",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "LIGHT",
+      "x": 480,
+      "y": 260,
+      "id": "l_xor",
+      "w": 40,
+      "h": 40,
+      "name": "XOR",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "LIGHT",
+      "x": 480,
+      "y": 340,
+      "id": "l_nand",
+      "w": 40,
+      "h": 40,
+      "name": "NAND",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    }
+  ],
+  "wires": [
+    {
+      "startCompId": "sw_a",
+      "startIndex": 0,
+      "endCompId": "g_and",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 210,
+          "y": 113
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_a",
+      "startIndex": 0,
+      "endCompId": "g_or",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 210,
+          "y": 193
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_a",
+      "startIndex": 0,
+      "endCompId": "g_xor",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 210,
+          "y": 273
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_a",
+      "startIndex": 0,
+      "endCompId": "g_nand",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 210,
+          "y": 353
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_b",
+      "startIndex": 0,
+      "endCompId": "g_and",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 240,
+          "y": 127
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_b",
+      "startIndex": 0,
+      "endCompId": "g_or",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 240,
+          "y": 207
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_b",
+      "startIndex": 0,
+      "endCompId": "g_xor",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 240,
+          "y": 287
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_b",
+      "startIndex": 0,
+      "endCompId": "g_nand",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 240,
+          "y": 367
+        }
+      ]
+    },
+    {
+      "startCompId": "g_and",
+      "startIndex": 0,
+      "endCompId": "l_and",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "g_or",
+      "startIndex": 0,
+      "endCompId": "l_or",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "g_xor",
+      "startIndex": 0,
+      "endCompId": "l_xor",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "g_nand",
+      "startIndex": 0,
+      "endCompId": "l_nand",
+      "endIndex": 0,
+      "points": []
+    }
+  ]
+}

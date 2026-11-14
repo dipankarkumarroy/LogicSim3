@@ -1,0 +1,350 @@
+{
+  "scale": 1,
+  "offset": {
+    "x": 80,
+    "y": 40
+  },
+  "globalLabelsVisible": true,
+  "components": [
+    {
+      "type": "TEXT",
+      "x": 120,
+      "y": 30,
+      "id": "t1",
+      "w": 320,
+      "h": 24,
+      "name": "TEXT",
+      "frequency": 1,
+      "color": "#93c5fd",
+      "showLabel": true,
+      "bits": 4,
+      "text": "4-Bit Adder with Binary & Hex Output",
+      "fontSize": 22
+    },
+    {
+      "type": "DIP_SWITCH",
+      "x": 120,
+      "y": 120,
+      "id": "dip_a",
+      "w": 60,
+      "h": 60,
+      "name": "A[3:0]",
+      "frequency": 1,
+      "color": "#1e3a8a",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "DIP_SWITCH",
+      "x": 120,
+      "y": 220,
+      "id": "dip_b",
+      "w": 60,
+      "h": 60,
+      "name": "B[3:0]",
+      "frequency": 1,
+      "color": "#1e3a8a",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "SWITCH",
+      "x": 130,
+      "y": 320,
+      "id": "sw_cin",
+      "w": 40,
+      "h": 40,
+      "name": "Cin",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "ADDER_4BIT",
+      "x": 320,
+      "y": 140,
+      "id": "adder",
+      "w": 120,
+      "h": 140,
+      "name": "ADDER_4BIT",
+      "frequency": 1,
+      "color": "#2e1065",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "BITS_OUT",
+      "x": 520,
+      "y": 100,
+      "id": "bits_sum",
+      "w": 140,
+      "h": 40,
+      "name": "SUM[3:0]",
+      "frequency": 1,
+      "color": "#ffffff",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "HEX_DISPLAY",
+      "x": 560,
+      "y": 190,
+      "id": "hex_sum",
+      "w": 60,
+      "h": 80,
+      "name": "HEX",
+      "frequency": 1,
+      "color": "#000",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "LIGHT",
+      "x": 570,
+      "y": 300,
+      "id": "l_cout",
+      "w": 40,
+      "h": 40,
+      "name": "Cout",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    }
+  ],
+  "wires": [
+    {
+      "startCompId": "dip_a",
+      "startIndex": 0,
+      "endCompId": "adder",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 230,
+          "y": 154
+        }
+      ]
+    },
+    {
+      "startCompId": "dip_a",
+      "startIndex": 1,
+      "endCompId": "adder",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 240,
+          "y": 168
+        }
+      ]
+    },
+    {
+      "startCompId": "dip_a",
+      "startIndex": 2,
+      "endCompId": "adder",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 250,
+          "y": 182
+        }
+      ]
+    },
+    {
+      "startCompId": "dip_a",
+      "startIndex": 3,
+      "endCompId": "adder",
+      "endIndex": 3,
+      "points": [
+        {
+          "x": 260,
+          "y": 196
+        }
+      ]
+    },
+    {
+      "startCompId": "dip_b",
+      "startIndex": 0,
+      "endCompId": "adder",
+      "endIndex": 4,
+      "points": [
+        {
+          "x": 230,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "startCompId": "dip_b",
+      "startIndex": 1,
+      "endCompId": "adder",
+      "endIndex": 5,
+      "points": [
+        {
+          "x": 240,
+          "y": 224
+        }
+      ]
+    },
+    {
+      "startCompId": "dip_b",
+      "startIndex": 2,
+      "endCompId": "adder",
+      "endIndex": 6,
+      "points": [
+        {
+          "x": 250,
+          "y": 238
+        }
+      ]
+    },
+    {
+      "startCompId": "dip_b",
+      "startIndex": 3,
+      "endCompId": "adder",
+      "endIndex": 7,
+      "points": [
+        {
+          "x": 260,
+          "y": 252
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_cin",
+      "startIndex": 0,
+      "endCompId": "adder",
+      "endIndex": 8,
+      "points": [
+        {
+          "x": 270,
+          "y": 266
+        }
+      ]
+    },
+    {
+      "startCompId": "adder",
+      "startIndex": 0,
+      "endCompId": "bits_sum",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 490,
+          "y": 75
+        },
+        {
+          "x": 642,
+          "y": 75
+        }
+      ]
+    },
+    {
+      "startCompId": "adder",
+      "startIndex": 1,
+      "endCompId": "bits_sum",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 480,
+          "y": 65
+        },
+        {
+          "x": 607,
+          "y": 65
+        }
+      ]
+    },
+    {
+      "startCompId": "adder",
+      "startIndex": 2,
+      "endCompId": "bits_sum",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 470,
+          "y": 55
+        },
+        {
+          "x": 572,
+          "y": 55
+        }
+      ]
+    },
+    {
+      "startCompId": "adder",
+      "startIndex": 3,
+      "endCompId": "bits_sum",
+      "endIndex": 3,
+      "points": [
+        {
+          "x": 460,
+          "y": 45
+        },
+        {
+          "x": 537,
+          "y": 45
+        }
+      ]
+    },
+    {
+      "startCompId": "adder",
+      "startIndex": 0,
+      "endCompId": "hex_sum",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 500,
+          "y": 206
+        }
+      ]
+    },
+    {
+      "startCompId": "adder",
+      "startIndex": 1,
+      "endCompId": "hex_sum",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 510,
+          "y": 222
+        }
+      ]
+    },
+    {
+      "startCompId": "adder",
+      "startIndex": 2,
+      "endCompId": "hex_sum",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 520,
+          "y": 238
+        }
+      ]
+    },
+    {
+      "startCompId": "adder",
+      "startIndex": 3,
+      "endCompId": "hex_sum",
+      "endIndex": 3,
+      "points": [
+        {
+          "x": 530,
+          "y": 254
+        }
+      ]
+    },
+    {
+      "startCompId": "adder",
+      "startIndex": 4,
+      "endCompId": "l_cout",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 490,
+          "y": 320
+        }
+      ]
+    }
+  ]
+}

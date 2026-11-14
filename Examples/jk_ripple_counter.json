@@ -1,0 +1,412 @@
+{
+  "scale": 0.9,
+  "offset": {
+    "x": 40,
+    "y": 40
+  },
+  "globalLabelsVisible": true,
+  "components": [
+    {
+      "type": "TEXT",
+      "x": 100,
+      "y": 30,
+      "id": "t1",
+      "w": 340,
+      "h": 24,
+      "name": "TEXT",
+      "frequency": 1,
+      "color": "#93c5fd",
+      "showLabel": true,
+      "bits": 4,
+      "text": "4-Bit JK Ripple Counter + Hex + Scope",
+      "fontSize": 22
+    },
+    {
+      "type": "VCC",
+      "x": 100,
+      "y": 120,
+      "id": "vcc1",
+      "w": 40,
+      "h": 40,
+      "name": "VCC",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "CLOCK",
+      "x": 100,
+      "y": 210,
+      "id": "clk1",
+      "w": 40,
+      "h": 40,
+      "name": "CLK",
+      "frequency": 2,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "JK_FF",
+      "x": 220,
+      "y": 160,
+      "id": "jk0",
+      "w": 60,
+      "h": 100,
+      "name": "Q0",
+      "frequency": 1,
+      "color": "#be185d",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "JK_FF",
+      "x": 350,
+      "y": 160,
+      "id": "jk1",
+      "w": 60,
+      "h": 100,
+      "name": "Q1",
+      "frequency": 1,
+      "color": "#be185d",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "JK_FF",
+      "x": 480,
+      "y": 160,
+      "id": "jk2",
+      "w": 60,
+      "h": 100,
+      "name": "Q2",
+      "frequency": 1,
+      "color": "#be185d",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "JK_FF",
+      "x": 610,
+      "y": 160,
+      "id": "jk3",
+      "w": 60,
+      "h": 100,
+      "name": "Q3",
+      "frequency": 1,
+      "color": "#be185d",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "BITS_OUT",
+      "x": 730,
+      "y": 110,
+      "id": "bits_q",
+      "w": 140,
+      "h": 40,
+      "name": "COUNT",
+      "frequency": 1,
+      "color": "#ffffff",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "HEX_DISPLAY",
+      "x": 770,
+      "y": 190,
+      "id": "hex_q",
+      "w": 60,
+      "h": 80,
+      "name": "HEX",
+      "frequency": 1,
+      "color": "#000",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "SCOPE",
+      "x": 220,
+      "y": 320,
+      "id": "scope1",
+      "w": 100,
+      "h": 60,
+      "name": "CLK_SCOPE",
+      "frequency": 1,
+      "color": "#1a202c",
+      "showLabel": true,
+      "bits": 4
+    }
+  ],
+  "wires": [
+    {
+      "startCompId": "vcc1",
+      "startIndex": 0,
+      "endCompId": "jk0",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 180,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "startCompId": "vcc1",
+      "startIndex": 0,
+      "endCompId": "jk0",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 180,
+          "y": 240
+        }
+      ]
+    },
+    {
+      "startCompId": "vcc1",
+      "startIndex": 0,
+      "endCompId": "jk1",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 310,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "startCompId": "vcc1",
+      "startIndex": 0,
+      "endCompId": "jk1",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 310,
+          "y": 240
+        }
+      ]
+    },
+    {
+      "startCompId": "vcc1",
+      "startIndex": 0,
+      "endCompId": "jk2",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 440,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "startCompId": "vcc1",
+      "startIndex": 0,
+      "endCompId": "jk2",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 440,
+          "y": 240
+        }
+      ]
+    },
+    {
+      "startCompId": "vcc1",
+      "startIndex": 0,
+      "endCompId": "jk3",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 570,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "startCompId": "vcc1",
+      "startIndex": 0,
+      "endCompId": "jk3",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 570,
+          "y": 240
+        }
+      ]
+    },
+    {
+      "startCompId": "clk1",
+      "startIndex": 0,
+      "endCompId": "jk0",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 170,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "startCompId": "clk1",
+      "startIndex": 0,
+      "endCompId": "scope1",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 170,
+          "y": 350
+        }
+      ]
+    },
+    {
+      "startCompId": "jk0",
+      "startIndex": 1,
+      "endCompId": "jk1",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 310,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "startCompId": "jk1",
+      "startIndex": 1,
+      "endCompId": "jk2",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 440,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "startCompId": "jk2",
+      "startIndex": 1,
+      "endCompId": "jk3",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 570,
+          "y": 210
+        }
+      ]
+    },
+    {
+      "startCompId": "jk0",
+      "startIndex": 0,
+      "endCompId": "bits_q",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 300,
+          "y": 80
+        },
+        {
+          "x": 852,
+          "y": 80
+        }
+      ]
+    },
+    {
+      "startCompId": "jk1",
+      "startIndex": 0,
+      "endCompId": "bits_q",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 430,
+          "y": 70
+        },
+        {
+          "x": 817,
+          "y": 70
+        }
+      ]
+    },
+    {
+      "startCompId": "jk2",
+      "startIndex": 0,
+      "endCompId": "bits_q",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 560,
+          "y": 60
+        },
+        {
+          "x": 782,
+          "y": 60
+        }
+      ]
+    },
+    {
+      "startCompId": "jk3",
+      "startIndex": 0,
+      "endCompId": "bits_q",
+      "endIndex": 3,
+      "points": [
+        {
+          "x": 690,
+          "y": 50
+        },
+        {
+          "x": 747,
+          "y": 50
+        }
+      ]
+    },
+    {
+      "startCompId": "jk0",
+      "startIndex": 0,
+      "endCompId": "hex_q",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 710,
+          "y": 206
+        }
+      ]
+    },
+    {
+      "startCompId": "jk1",
+      "startIndex": 0,
+      "endCompId": "hex_q",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 720,
+          "y": 222
+        }
+      ]
+    },
+    {
+      "startCompId": "jk2",
+      "startIndex": 0,
+      "endCompId": "hex_q",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 730,
+          "y": 238
+        }
+      ]
+    },
+    {
+      "startCompId": "jk3",
+      "startIndex": 0,
+      "endCompId": "hex_q",
+      "endIndex": 3,
+      "points": [
+        {
+          "x": 740,
+          "y": 254
+        }
+      ]
+    }
+  ]
+}

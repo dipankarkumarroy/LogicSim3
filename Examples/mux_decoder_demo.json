@@ -1,0 +1,214 @@
+{
+  "scale": 1,
+  "offset": {
+    "x": 80,
+    "y": 40
+  },
+  "globalLabelsVisible": true,
+  "components": [
+    {
+      "type": "TEXT",
+      "x": 100,
+      "y": 30,
+      "id": "t1",
+      "w": 320,
+      "h": 24,
+      "name": "TEXT",
+      "frequency": 1,
+      "color": "#93c5fd",
+      "showLabel": true,
+      "bits": 4,
+      "text": "4:1 Multiplexer & 2-to-4 Decoder",
+      "fontSize": 22
+    },
+    {
+      "type": "DIP_SWITCH",
+      "x": 100,
+      "y": 120,
+      "id": "dip_d",
+      "w": 60,
+      "h": 60,
+      "name": "DATA[3:0]",
+      "frequency": 1,
+      "color": "#1e3a8a",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "DIP_SWITCH",
+      "x": 100,
+      "y": 260,
+      "id": "dip_s",
+      "w": 60,
+      "h": 40,
+      "name": "SEL[1:0]",
+      "frequency": 1,
+      "color": "#1e3a8a",
+      "showLabel": true,
+      "bits": 2
+    },
+    {
+      "type": "MULTIPLEXER",
+      "x": 280,
+      "y": 120,
+      "id": "mux1",
+      "w": 60,
+      "h": 60,
+      "name": "MUX",
+      "frequency": 1,
+      "color": "#7c3aed",
+      "showLabel": true,
+      "bits": 2
+    },
+    {
+      "type": "LIGHT",
+      "x": 420,
+      "y": 130,
+      "id": "l_mux",
+      "w": 40,
+      "h": 40,
+      "name": "MUX_OUT",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "DECODER",
+      "x": 280,
+      "y": 250,
+      "id": "dec1",
+      "w": 60,
+      "h": 60,
+      "name": "DEC",
+      "frequency": 1,
+      "color": "#7c3aed",
+      "showLabel": true,
+      "bits": 2
+    },
+    {
+      "type": "BAR_GRAPH",
+      "x": 420,
+      "y": 250,
+      "id": "bar1",
+      "w": 40,
+      "h": 60,
+      "name": "ONE_HOT",
+      "frequency": 1,
+      "color": "#18181b",
+      "showLabel": true,
+      "bits": 4
+    }
+  ],
+  "wires": [
+    {
+      "startCompId": "dip_d",
+      "startIndex": 0,
+      "endCompId": "mux1",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "dip_d",
+      "startIndex": 1,
+      "endCompId": "mux1",
+      "endIndex": 1,
+      "points": []
+    },
+    {
+      "startCompId": "dip_d",
+      "startIndex": 2,
+      "endCompId": "mux1",
+      "endIndex": 2,
+      "points": []
+    },
+    {
+      "startCompId": "dip_d",
+      "startIndex": 3,
+      "endCompId": "mux1",
+      "endIndex": 3,
+      "points": []
+    },
+    {
+      "startCompId": "dip_s",
+      "startIndex": 0,
+      "endCompId": "mux1",
+      "endIndex": 4,
+      "points": [
+        {
+          "x": 220,
+          "y": 215
+        },
+        {
+          "x": 320,
+          "y": 215
+        }
+      ]
+    },
+    {
+      "startCompId": "dip_s",
+      "startIndex": 1,
+      "endCompId": "mux1",
+      "endIndex": 5,
+      "points": [
+        {
+          "x": 210,
+          "y": 225
+        },
+        {
+          "x": 300,
+          "y": 225
+        }
+      ]
+    },
+    {
+      "startCompId": "mux1",
+      "startIndex": 0,
+      "endCompId": "l_mux",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "dip_s",
+      "startIndex": 0,
+      "endCompId": "dec1",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "dip_s",
+      "startIndex": 1,
+      "endCompId": "dec1",
+      "endIndex": 1,
+      "points": []
+    },
+    {
+      "startCompId": "dec1",
+      "startIndex": 0,
+      "endCompId": "bar1",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "dec1",
+      "startIndex": 1,
+      "endCompId": "bar1",
+      "endIndex": 1,
+      "points": []
+    },
+    {
+      "startCompId": "dec1",
+      "startIndex": 2,
+      "endCompId": "bar1",
+      "endIndex": 2,
+      "points": []
+    },
+    {
+      "startCompId": "dec1",
+      "startIndex": 3,
+      "endCompId": "bar1",
+      "endIndex": 3,
+      "points": []
+    }
+  ]
+}

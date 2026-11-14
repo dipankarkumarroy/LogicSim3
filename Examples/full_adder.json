@@ -1,0 +1,295 @@
+{
+  "scale": 1,
+  "offset": {
+    "x": 80,
+    "y": 40
+  },
+  "globalLabelsVisible": true,
+  "components": [
+    {
+      "type": "TEXT",
+      "x": 100,
+      "y": 40,
+      "id": "t1",
+      "w": 260,
+      "h": 24,
+      "name": "TEXT",
+      "frequency": 1,
+      "color": "#93c5fd",
+      "showLabel": true,
+      "bits": 4,
+      "text": "1-Bit Full Adder (Gate Level)",
+      "fontSize": 22
+    },
+    {
+      "type": "SWITCH",
+      "x": 100,
+      "y": 120,
+      "id": "sw_a",
+      "w": 40,
+      "h": 40,
+      "name": "A",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "SWITCH",
+      "x": 100,
+      "y": 200,
+      "id": "sw_b",
+      "w": 40,
+      "h": 40,
+      "name": "B",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "SWITCH",
+      "x": 100,
+      "y": 320,
+      "id": "sw_cin",
+      "w": 40,
+      "h": 40,
+      "name": "Cin",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "XOR",
+      "x": 260,
+      "y": 140,
+      "id": "xor1",
+      "w": 60,
+      "h": 40,
+      "name": "XOR1",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "AND",
+      "x": 260,
+      "y": 240,
+      "id": "and1",
+      "w": 60,
+      "h": 40,
+      "name": "AND1",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "XOR",
+      "x": 440,
+      "y": 160,
+      "id": "xor2",
+      "w": 60,
+      "h": 40,
+      "name": "XOR2",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "AND",
+      "x": 440,
+      "y": 260,
+      "id": "and2",
+      "w": 60,
+      "h": 40,
+      "name": "AND2",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "OR",
+      "x": 580,
+      "y": 270,
+      "id": "or1",
+      "w": 60,
+      "h": 40,
+      "name": "OR1",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "LIGHT",
+      "x": 700,
+      "y": 160,
+      "id": "l_sum",
+      "w": 40,
+      "h": 40,
+      "name": "Sum",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "LIGHT",
+      "x": 700,
+      "y": 270,
+      "id": "l_cout",
+      "w": 40,
+      "h": 40,
+      "name": "Cout",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    }
+  ],
+  "wires": [
+    {
+      "startCompId": "sw_a",
+      "startIndex": 0,
+      "endCompId": "xor1",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 190,
+          "y": 153
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_b",
+      "startIndex": 0,
+      "endCompId": "xor1",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 210,
+          "y": 167
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_a",
+      "startIndex": 0,
+      "endCompId": "and1",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 190,
+          "y": 253
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_b",
+      "startIndex": 0,
+      "endCompId": "and1",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 210,
+          "y": 267
+        }
+      ]
+    },
+    {
+      "startCompId": "xor1",
+      "startIndex": 0,
+      "endCompId": "xor2",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 370,
+          "y": 173
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_cin",
+      "startIndex": 0,
+      "endCompId": "xor2",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 390,
+          "y": 187
+        }
+      ]
+    },
+    {
+      "startCompId": "xor1",
+      "startIndex": 0,
+      "endCompId": "and2",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 370,
+          "y": 273
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_cin",
+      "startIndex": 0,
+      "endCompId": "and2",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 390,
+          "y": 287
+        }
+      ]
+    },
+    {
+      "startCompId": "and2",
+      "startIndex": 0,
+      "endCompId": "or1",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 540,
+          "y": 283
+        }
+      ]
+    },
+    {
+      "startCompId": "and1",
+      "startIndex": 0,
+      "endCompId": "or1",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 350,
+          "y": 330
+        },
+        {
+          "x": 540,
+          "y": 297
+        }
+      ]
+    },
+    {
+      "startCompId": "xor2",
+      "startIndex": 0,
+      "endCompId": "l_sum",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "or1",
+      "startIndex": 0,
+      "endCompId": "l_cout",
+      "endIndex": 0,
+      "points": []
+    }
+  ]
+}

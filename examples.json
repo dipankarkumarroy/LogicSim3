@@ -1,0 +1,37 @@
+[
+  {
+    "title": "4-Bit Counter",
+    "description": "Synchronous binary counter built with D flip-flops, logic gates, clock, and 16-channel analyzer.",
+    "link": "#Examples/counter.json"
+  },
+  {
+    "title": "Basic Logic Gates",
+    "description": "Compare AND, OR, XOR, and NAND gates interactively with switches, lights, and Truth Table view.",
+    "link": "#Examples/logic_gates_demo.json"
+  },
+  {
+    "title": "1-Bit Full Adder",
+    "description": "Gate-level Full Adder using XOR, AND, and OR gates to compute Sum and Carry-Out.",
+    "link": "#Examples/full_adder.json"
+  },
+  {
+    "title": "4-Bit Adder + Hex Display",
+    "description": "Add two 4-bit DIP switch values with binary digit readout, Hex display, and Carry indicator.",
+    "link": "#Examples/adder_4bit_hex.json"
+  },
+  {
+    "title": "4-Bit JK Ripple Counter",
+    "description": "Asynchronous 4-bit up-counter using JK flip-flops driving a Hex display, binary readout, and Scope.",
+    "link": "#Examples/jk_ripple_counter.json"
+  },
+  {
+    "title": "4:1 MUX & 2-to-4 Decoder",
+    "description": "Data selection and one-hot decoding using a Multiplexer, Decoder, DIP switches, and LED Bar Graph.",
+    "link": "#Examples/mux_decoder_demo.json"
+  },
+  {
+    "title": "7408 Quad AND IC",
+    "description": "Demonstrates powering a 7408 DIP chip (Pin 14 VCC, Pin 7 GND) and driving a polarity-aware LED.",
+    "link": "#Examples/ic7408_and_gate.json"
+  }
+]

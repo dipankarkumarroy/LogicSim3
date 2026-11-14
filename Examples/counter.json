@@ -1,0 +1,1169 @@
+{
+  "scale": 0.6766764161830627,
+  "offset": {
+    "x": 389.2589279496543,
+    "y": -70.256725812745
+  },
+  "globalLabelsVisible": true,
+  "components": [
+    {
+      "type": "NAND",
+      "x": 644.0280672500123,
+      "y": 381.59504510222575,
+      "id": "comp_eoblkvt2p",
+      "w": 60,
+      "h": 40,
+      "name": "NAND",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NAND",
+      "x": 644.683269291178,
+      "y": 425.1843476032018,
+      "id": "comp_ywlqqjkpy",
+      "w": 60,
+      "h": 40,
+      "name": "NAND",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NAND",
+      "x": 644.4793481749201,
+      "y": 468.0464772285893,
+      "id": "comp_kll5lndd0",
+      "w": 60,
+      "h": 40,
+      "name": "NAND",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NAND",
+      "x": 643.6716882042158,
+      "y": 511.70849368961376,
+      "id": "comp_m2rhbjx0e",
+      "w": 60,
+      "h": 40,
+      "name": "NAND",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NAND",
+      "x": 643.4471723555374,
+      "y": 554.9352185621593,
+      "id": "comp_b1t8ccq3m",
+      "w": 60,
+      "h": 40,
+      "name": "NAND",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NAND",
+      "x": 643.7309758910797,
+      "y": 599.1924571815058,
+      "id": "comp_3h6z5ohil",
+      "w": 60,
+      "h": 40,
+      "name": "NAND",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NAND",
+      "x": 644.3861779322453,
+      "y": 642.7817596824818,
+      "id": "comp_ptabc9rju",
+      "w": 60,
+      "h": 40,
+      "name": "NAND",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NAND",
+      "x": 644.1822568159874,
+      "y": 685.6438893078694,
+      "id": "comp_j05nvszbo",
+      "w": 60,
+      "h": 40,
+      "name": "NAND",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NAND",
+      "x": 643.3745968452831,
+      "y": 729.3059057688938,
+      "id": "comp_k2r20jrjv",
+      "w": 60,
+      "h": 40,
+      "name": "NAND",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NAND",
+      "x": 643.1500809966047,
+      "y": 772.5326306414394,
+      "id": "comp_zc125fu7k",
+      "w": 60,
+      "h": 40,
+      "name": "NAND",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "D_FF_R",
+      "x": 315.6571736282267,
+      "y": 280.4976153063812,
+      "id": "comp_6i4xpsn0m",
+      "w": 60,
+      "h": 100,
+      "name": "D_FF_R",
+      "frequency": 1,
+      "color": "#4c1d95",
+      "showLabel": false,
+      "bits": 4
+    },
+    {
+      "type": "D_FF_R",
+      "x": 312.0459680097728,
+      "y": 418.7826131123021,
+      "id": "comp_ldq4l9bk8",
+      "w": 60,
+      "h": 100,
+      "name": "D_FF_R",
+      "frequency": 1,
+      "color": "#4c1d95",
+      "showLabel": false,
+      "bits": 4
+    },
+    {
+      "type": "D_FF_R",
+      "x": 315.3105618588964,
+      "y": 827.3832346435647,
+      "id": "comp_hncj2csd1",
+      "w": 60,
+      "h": 100,
+      "name": "D_FF_R",
+      "frequency": 1,
+      "color": "#4c1d95",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "D_FF_R",
+      "x": 312.70581789938495,
+      "y": 554.2137634268746,
+      "id": "comp_e61ifz7cb",
+      "w": 60,
+      "h": 100,
+      "name": "D_FF_R",
+      "frequency": 1,
+      "color": "#4c1d95",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "D_FF_R",
+      "x": 315.67698858544765,
+      "y": 692.5516453979776,
+      "id": "comp_bqdxvg1p6",
+      "w": 60,
+      "h": 100,
+      "name": "D_FF_R",
+      "frequency": 1,
+      "color": "#4c1d95",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "AND",
+      "x": 48.89501872616603,
+      "y": 309.33735443182763,
+      "id": "comp_ojm8q8x21",
+      "w": 60,
+      "h": 40,
+      "name": "AND",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": false,
+      "bits": 4
+    },
+    {
+      "type": "NOT",
+      "x": -55.368533849460555,
+      "y": 261.2790406426873,
+      "id": "comp_n8yek7lkc",
+      "w": 40,
+      "h": 40,
+      "name": "NOT",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "AND",
+      "x": 44.26024181356594,
+      "y": 544.3338638729567,
+      "id": "comp_18aof0ocl",
+      "w": 60,
+      "h": 40,
+      "name": "AND",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NOR",
+      "x": 133.61421702965316,
+      "y": 537.2368131019931,
+      "id": "comp_su7lnpeb7",
+      "w": 60,
+      "h": 40,
+      "name": "NOR",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "CLOCK",
+      "x": -81.79114646478354,
+      "y": 340.68228084797636,
+      "id": "comp_ugbvyjv9i",
+      "w": 40,
+      "h": 40,
+      "name": "CLOCK",
+      "frequency": 5,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "TEXT",
+      "x": 353.10521950114867,
+      "y": 992.4452303701561,
+      "id": "comp_6lkbi1gkz",
+      "w": 318.129638671875,
+      "h": 47.71150567329164,
+      "name": "TEXT",
+      "frequency": 1,
+      "text": "Counter Circuit",
+      "fontSize": 47.71150567329164,
+      "color": "#e0e0e0",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NOT",
+      "x": 743.6145172819824,
+      "y": 381.67377143105284,
+      "id": "comp_t02y7hxaa",
+      "w": 40,
+      "h": 40,
+      "name": "NOT",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NOT",
+      "x": 743.8025513747084,
+      "y": 425.08465965052244,
+      "id": "comp_b48rzgr5w",
+      "w": 40,
+      "h": 40,
+      "name": "NOT",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NOT",
+      "x": 743.8025513747084,
+      "y": 469.05515894428845,
+      "id": "comp_8xbfmlk2b",
+      "w": 40,
+      "h": 40,
+      "name": "NOT",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NOT",
+      "x": 743.8025513747084,
+      "y": 513.0256582380545,
+      "id": "comp_t3ox6uqx6",
+      "w": 40,
+      "h": 40,
+      "name": "NOT",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NOT",
+      "x": 744.2911124779724,
+      "y": 556.2633158769244,
+      "id": "comp_8e89ja2cj",
+      "w": 40,
+      "h": 40,
+      "name": "NOT",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NOT",
+      "x": 744.3317180611139,
+      "y": 599.7938738232914,
+      "id": "comp_ynrxwufow",
+      "w": 40,
+      "h": 40,
+      "name": "NOT",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NOT",
+      "x": 744.2574157459443,
+      "y": 643.5720018190295,
+      "id": "comp_f2ajm5erf",
+      "w": 40,
+      "h": 40,
+      "name": "NOT",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NOT",
+      "x": 744.2574157459443,
+      "y": 687.1720018190296,
+      "id": "comp_rj254tdgr",
+      "w": 40,
+      "h": 40,
+      "name": "NOT",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NOT",
+      "x": 742.8574157459442,
+      "y": 730.1720018190294,
+      "id": "comp_sgjbvdy8a",
+      "w": 40,
+      "h": 40,
+      "name": "NOT",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "NOT",
+      "x": 742.8574157459442,
+      "y": 774.3720018190296,
+      "id": "comp_tfpjz6t1z",
+      "w": 40,
+      "h": 40,
+      "name": "NOT",
+      "frequency": 1,
+      "color": "#4a5568",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "ANALYZER",
+      "x": 990.7666853281892,
+      "y": 373.00436193648363,
+      "id": "comp_o2lta2zef",
+      "w": 447.1953132929809,
+      "h": 340,
+      "name": "ANALYZER",
+      "frequency": 1,
+      "color": "#1a202c",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "TEXT",
+      "x": 1110.9670576112464,
+      "y": 731.2306914628318,
+      "id": "comp_ghrs57qif",
+      "w": 263.13653564453125,
+      "h": 33.82186841104169,
+      "name": "TEXT",
+      "frequency": 1,
+      "text": "I/O Signal pattern",
+      "fontSize": 33.82186841104169,
+      "color": "#e0e0e0",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "BUTTON",
+      "x": 171.80234501823273,
+      "y": 246.7987427451037,
+      "id": "comp_hey45mzqr",
+      "w": 40,
+      "h": 40,
+      "name": "BUTTON",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    }
+  ],
+  "wires": [
+    {
+      "startCompId": "comp_ojm8q8x21",
+      "startIndex": 0,
+      "endCompId": "comp_6i4xpsn0m",
+      "endIndex": 1,
+      "points": []
+    },
+    {
+      "startCompId": "comp_ojm8q8x21",
+      "startIndex": 0,
+      "endCompId": "comp_ldq4l9bk8",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 275,
+          "y": 468.9903165250083
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_ojm8q8x21",
+      "startIndex": 0,
+      "endCompId": "comp_e61ifz7cb",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 274,
+          "y": 604.0885329950348
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_ojm8q8x21",
+      "startIndex": 0,
+      "endCompId": "comp_bqdxvg1p6",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 273,
+          "y": 742.9339855847916
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_ojm8q8x21",
+      "startIndex": 0,
+      "endCompId": "comp_hncj2csd1",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 274,
+          "y": 877.5275320462547
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_n8yek7lkc",
+      "startIndex": 0,
+      "endCompId": "comp_ojm8q8x21",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "comp_bqdxvg1p6",
+      "startIndex": 0,
+      "endCompId": "comp_hncj2csd1",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 404.63213441082877,
+          "y": 818.1297985201984
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_e61ifz7cb",
+      "startIndex": 0,
+      "endCompId": "comp_bqdxvg1p6",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 402.85170166803476,
+          "y": 681.9266936964593
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_6i4xpsn0m",
+      "startIndex": 0,
+      "endCompId": "comp_ldq4l9bk8",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 408.19299989641667,
+          "y": 411.7460249774739
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_6i4xpsn0m",
+      "startIndex": 1,
+      "endCompId": "comp_18aof0ocl",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 384.8294378886708,
+          "y": 386.26992189673933
+        },
+        {
+          "x": 19.52284937678453,
+          "y": 525.6632254078538
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_e61ifz7cb",
+      "startIndex": 1,
+      "endCompId": "comp_18aof0ocl",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 382.65330947798697,
+          "y": 659.0578835613397
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_18aof0ocl",
+      "startIndex": 0,
+      "endCompId": "comp_su7lnpeb7",
+      "endIndex": 1,
+      "points": []
+    },
+    {
+      "startCompId": "comp_ldq4l9bk8",
+      "startIndex": 1,
+      "endCompId": "comp_su7lnpeb7",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 381.6566017767265,
+          "y": 526.677437598854
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_su7lnpeb7",
+      "startIndex": 0,
+      "endCompId": "comp_e61ifz7cb",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "comp_6i4xpsn0m",
+      "startIndex": 1,
+      "endCompId": "comp_eoblkvt2p",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 596.4183389841575,
+          "y": 407.54776242369405
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_6i4xpsn0m",
+      "startIndex": 0,
+      "endCompId": "comp_ywlqqjkpy",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 589.0199025299619,
+          "y": 437.3700877544025
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_ldq4l9bk8",
+      "startIndex": 1,
+      "endCompId": "comp_ywlqqjkpy",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 451.9541436506118,
+          "y": 371.6758482915187
+        },
+        {
+          "x": 578.4763826161657,
+          "y": 450.34672764830543
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_ldq4l9bk8",
+      "startIndex": 0,
+      "endCompId": "comp_kll5lndd0",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 460.8755835776701,
+          "y": 383.8414481920528
+        },
+        {
+          "x": 571.1770226758453,
+          "y": 481.9772873896939
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_e61ifz7cb",
+      "startIndex": 1,
+      "endCompId": "comp_kll5lndd0",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 467.36390352462155,
+          "y": 392.76288811911104
+        },
+        {
+          "x": 563.8776627355248,
+          "y": 497.38704726370366
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_e61ifz7cb",
+      "startIndex": 0,
+      "endCompId": "comp_m2rhbjx0e",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 477.0963834450488,
+          "y": 408.1726479931208
+        },
+        {
+          "x": 554.9562228084666,
+          "y": 523.3403270515096
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_bqdxvg1p6",
+      "startIndex": 1,
+      "endCompId": "comp_m2rhbjx0e",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 485.2067833787381,
+          "y": 426.01552784723737
+        },
+        {
+          "x": 546.8458228747772,
+          "y": 540.3721669122573
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_hncj2csd1",
+      "startIndex": 1,
+      "endCompId": "comp_6i4xpsn0m",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 416.9310977819133,
+          "y": 270.3286269055081
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_hncj2csd1",
+      "startIndex": 1,
+      "endCompId": "comp_b1t8ccq3m",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 416.1214927022821,
+          "y": 582.2188436531441
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_6i4xpsn0m",
+      "startIndex": 0,
+      "endCompId": "comp_3h6z5ohil",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 525.6246673602582,
+          "y": 611.6911903809876
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_6i4xpsn0m",
+      "startIndex": 1,
+      "endCompId": "comp_ptabc9rju",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 518.3889559541099,
+          "y": 660.1307700774324
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_ldq4l9bk8",
+      "startIndex": 1,
+      "endCompId": "comp_j05nvszbo",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 509.0287037349189,
+          "y": 700.3111889967881
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_e61ifz7cb",
+      "startIndex": 1,
+      "endCompId": "comp_k2r20jrjv",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 468.1816464576687,
+          "y": 743.3256972653882
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_bqdxvg1p6",
+      "startIndex": 1,
+      "endCompId": "comp_zc125fu7k",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 484.03795040368755,
+          "y": 784.9804145734565
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_hncj2csd1",
+      "startIndex": 0,
+      "endCompId": "comp_zc125fu7k",
+      "endIndex": 1,
+      "points": []
+    },
+    {
+      "startCompId": "comp_bqdxvg1p6",
+      "startIndex": 0,
+      "endCompId": "comp_k2r20jrjv",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 404.5607146840896,
+          "y": 758.6904078516781
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_e61ifz7cb",
+      "startIndex": 0,
+      "endCompId": "comp_j05nvszbo",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 403.359048274511,
+          "y": 695.0020881440137
+        },
+        {
+          "x": 429.19487608045034,
+          "y": 711.8254178781136
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_ldq4l9bk8",
+      "startIndex": 0,
+      "endCompId": "comp_ptabc9rju",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 443.01403979060393,
+          "y": 672.1704263620207
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_ugbvyjv9i",
+      "startIndex": 0,
+      "endCompId": "comp_ojm8q8x21",
+      "endIndex": 1,
+      "points": []
+    },
+    {
+      "startCompId": "comp_hncj2csd1",
+      "startIndex": 1,
+      "endCompId": "comp_eoblkvt2p",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 605.5137389933489,
+          "y": 395.5400484468338
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_hncj2csd1",
+      "startIndex": 0,
+      "endCompId": "comp_3h6z5ohil",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 583.0653697727968,
+          "y": 628.4660944005192
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_bqdxvg1p6",
+      "startIndex": 0,
+      "endCompId": "comp_b1t8ccq3m",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 405.9590775691929,
+          "y": 824.3769567712822
+        },
+        {
+          "x": 550.2694656340784,
+          "y": 569.27707405305
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_eoblkvt2p",
+      "startIndex": 0,
+      "endCompId": "comp_t02y7hxaa",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "comp_ywlqqjkpy",
+      "startIndex": 0,
+      "endCompId": "comp_b48rzgr5w",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "comp_kll5lndd0",
+      "startIndex": 0,
+      "endCompId": "comp_8xbfmlk2b",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "comp_m2rhbjx0e",
+      "startIndex": 0,
+      "endCompId": "comp_t3ox6uqx6",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "comp_b1t8ccq3m",
+      "startIndex": 0,
+      "endCompId": "comp_8e89ja2cj",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "comp_3h6z5ohil",
+      "startIndex": 0,
+      "endCompId": "comp_ynrxwufow",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "comp_ptabc9rju",
+      "startIndex": 0,
+      "endCompId": "comp_f2ajm5erf",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "comp_j05nvszbo",
+      "startIndex": 0,
+      "endCompId": "comp_rj254tdgr",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "comp_k2r20jrjv",
+      "startIndex": 0,
+      "endCompId": "comp_sgjbvdy8a",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "comp_zc125fu7k",
+      "startIndex": 0,
+      "endCompId": "comp_tfpjz6t1z",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "comp_t02y7hxaa",
+      "startIndex": 0,
+      "endCompId": "comp_o2lta2zef",
+      "endIndex": 0,
+      "points": []
+    },
+    {
+      "startCompId": "comp_b48rzgr5w",
+      "startIndex": 0,
+      "endCompId": "comp_o2lta2zef",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 826.0535940683222,
+          "y": 423.6096686287258
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_8xbfmlk2b",
+      "startIndex": 0,
+      "endCompId": "comp_o2lta2zef",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 839.1013468449256,
+          "y": 443.1812977936309
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_t3ox6uqx6",
+      "startIndex": 0,
+      "endCompId": "comp_o2lta2zef",
+      "endIndex": 3,
+      "points": [
+        {
+          "x": 849.9744741587618,
+          "y": 460.034645130077
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_8e89ja2cj",
+      "startIndex": 0,
+      "endCompId": "comp_o2lta2zef",
+      "endIndex": 4,
+      "points": [
+        {
+          "x": 864.6531960324406,
+          "y": 481.23724339205756
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_ynrxwufow",
+      "startIndex": 0,
+      "endCompId": "comp_o2lta2zef",
+      "endIndex": 5,
+      "points": [
+        {
+          "x": 874.4390106148933,
+          "y": 501.35252892265447
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_f2ajm5erf",
+      "startIndex": 0,
+      "endCompId": "comp_o2lta2zef",
+      "endIndex": 6,
+      "points": [
+        {
+          "x": 886.9431070258048,
+          "y": 523.0987835503269
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_rj254tdgr",
+      "startIndex": 0,
+      "endCompId": "comp_o2lta2zef",
+      "endIndex": 7,
+      "points": [
+        {
+          "x": 897.816234339641,
+          "y": 542.1267563495402
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_sgjbvdy8a",
+      "startIndex": 0,
+      "endCompId": "comp_o2lta2zef",
+      "endIndex": 8,
+      "points": [
+        {
+          "x": 910.3203307505527,
+          "y": 562.2420418801372
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_tfpjz6t1z",
+      "startIndex": 0,
+      "endCompId": "comp_o2lta2zef",
+      "endIndex": 9,
+      "points": [
+        {
+          "x": 925.5427089899233,
+          "y": 581.8136710450423
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_ugbvyjv9i",
+      "startIndex": 0,
+      "endCompId": "comp_o2lta2zef",
+      "endIndex": 10,
+      "points": [
+        {
+          "x": -29.706884806266736,
+          "y": 977.0933649854989
+        },
+        {
+          "x": 945.2654547007711,
+          "y": 602.3318090885333
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_hey45mzqr",
+      "startIndex": 0,
+      "endCompId": "comp_hncj2csd1",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 287.440369727821,
+          "y": 361.5802946997285
+        },
+        {
+          "x": 287.440369727821,
+          "y": 499.74313718439925
+        },
+        {
+          "x": 286.4511369654009,
+          "y": 635.9275141442299
+        },
+        {
+          "x": 286.38141862272187,
+          "y": 773.4744744741213
+        },
+        {
+          "x": 286.1655276916377,
+          "y": 906.8688641967179
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_hey45mzqr",
+      "startIndex": 0,
+      "endCompId": "comp_bqdxvg1p6",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 286.38141862272187,
+          "y": 773.4744744741213
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_hey45mzqr",
+      "startIndex": 0,
+      "endCompId": "comp_e61ifz7cb",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 286.4511369654009,
+          "y": 635.9275141442299
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_hey45mzqr",
+      "startIndex": 0,
+      "endCompId": "comp_ldq4l9bk8",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 287.440369727821,
+          "y": 499.74313718439925
+        }
+      ]
+    },
+    {
+      "startCompId": "comp_hey45mzqr",
+      "startIndex": 0,
+      "endCompId": "comp_6i4xpsn0m",
+      "endIndex": 2,
+      "points": [
+        {
+          "x": 287.440369727821,
+          "y": 361.5802946997285
+        }
+      ]
+    }
+  ]
+}

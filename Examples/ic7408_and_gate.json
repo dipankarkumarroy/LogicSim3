@@ -1,0 +1,189 @@
+{
+  "scale": 1,
+  "offset": {
+    "x": 80,
+    "y": 40
+  },
+  "globalLabelsVisible": true,
+  "components": [
+    {
+      "type": "TEXT",
+      "x": 100,
+      "y": 40,
+      "id": "t1",
+      "w": 320,
+      "h": 24,
+      "name": "TEXT",
+      "frequency": 1,
+      "color": "#93c5fd",
+      "showLabel": true,
+      "bits": 4,
+      "text": "7408 Quad 2-Input AND IC (Pin 14 VCC, Pin 7 GND)",
+      "fontSize": 20
+    },
+    {
+      "type": "VCC",
+      "x": 120,
+      "y": 110,
+      "id": "vcc1",
+      "w": 40,
+      "h": 40,
+      "name": "VCC",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "SWITCH",
+      "x": 120,
+      "y": 190,
+      "id": "sw_1a",
+      "w": 40,
+      "h": 40,
+      "name": "1A",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "SWITCH",
+      "x": 120,
+      "y": 260,
+      "id": "sw_1b",
+      "w": 40,
+      "h": 40,
+      "name": "1B",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "GND",
+      "x": 120,
+      "y": 340,
+      "id": "gnd1",
+      "w": 40,
+      "h": 40,
+      "name": "GND",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "7408",
+      "x": 320,
+      "y": 200,
+      "id": "ic7408",
+      "w": 120,
+      "h": 40,
+      "name": "7408",
+      "frequency": 1,
+      "color": "#1f2937",
+      "showLabel": true,
+      "bits": 4
+    },
+    {
+      "type": "LED",
+      "x": 520,
+      "y": 205,
+      "id": "led1",
+      "w": 30,
+      "h": 30,
+      "name": "1Y_LED",
+      "frequency": 1,
+      "color": "#2d3748",
+      "showLabel": true,
+      "bits": 4
+    }
+  ],
+  "wires": [
+    {
+      "startCompId": "vcc1",
+      "startIndex": 0,
+      "endCompId": "ic7408",
+      "endIndex": 9,
+      "points": [
+        {
+          "x": 335,
+          "y": 130
+        }
+      ]
+    },
+    {
+      "startCompId": "gnd1",
+      "startIndex": 0,
+      "endCompId": "ic7408",
+      "endIndex": 8,
+      "points": [
+        {
+          "x": 425,
+          "y": 360
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_1a",
+      "startIndex": 0,
+      "endCompId": "ic7408",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 220,
+          "y": 290
+        },
+        {
+          "x": 335,
+          "y": 290
+        }
+      ]
+    },
+    {
+      "startCompId": "sw_1b",
+      "startIndex": 0,
+      "endCompId": "ic7408",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 240,
+          "y": 310
+        },
+        {
+          "x": 350,
+          "y": 310
+        }
+      ]
+    },
+    {
+      "startCompId": "ic7408",
+      "startIndex": 0,
+      "endCompId": "led1",
+      "endIndex": 0,
+      "points": [
+        {
+          "x": 365,
+          "y": 270
+        },
+        {
+          "x": 529,
+          "y": 270
+        }
+      ]
+    },
+    {
+      "startCompId": "gnd1",
+      "startIndex": 0,
+      "endCompId": "led1",
+      "endIndex": 1,
+      "points": [
+        {
+          "x": 541,
+          "y": 360
+        }
+      ]
+    }
+  ]
+}

@@ -177,19 +177,6 @@ Then visit <http://localhost:8000> in a modern browser. If Python is unavailable
 - **Safety feedback:** Conflicting HIGH/LOW drives are detected at inputs; the simulation pauses and marks the short-circuit location.
 - **Clocks and instruments:** Clock frequency is configurable; scopes/analyzers sample transitions during simulation and display frequency information.
 
-## Screenshots and video
-
-No image or video files are currently included in this repository. To add real project media, capture the running app and commit the assets—for example:
-
-```text
-media/
-  full-adder.png
-  counter-waveforms.png
-  logicsim-demo.mp4
-```
-
-Then replace this note with Markdown image embeds and a link to the clip, for example `![Full-adder circuit](media/full-adder.png)` and `[Watch the LogicSim3 demo](media/logicsim-demo.mp4)`. GitHub README rendering does not support embedding a playable `<video>` player reliably, so a linked MP4 or an animated GIF is a more portable option. Keep captures representative of the actual app and avoid committing very large recordings.
-
 ## Deployment
 
 The repository includes a GitHub Actions workflow at [`.github/workflows/static.yml`](.github/workflows/static.yml) that deploys the repository's static content to GitHub Pages when changes are pushed to `main`, and supports manual runs from Actions. The deployment requires GitHub Pages to be enabled and configured for the workflow in repository settings.

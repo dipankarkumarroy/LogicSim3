@@ -21,14 +21,6 @@ A canvas-based logic circuit workbench for exploring gates, arithmetic, sequenti
 
 LogicSim3 is a digital logic simulator and visual learning tool. Assemble circuits on an interactive canvas, run them live, and inspect outputs as logic levels, displays, or waveforms. The project is implemented with browser-native HTML, CSS, JavaScript, and Canvas—there is no framework, package manager, or compilation stage.
 
-### Live simulation, visual feedback
-
-When the simulation is running, the app advances the circuit continuously. Active wires turn green; the clock and stateful components update over time; and Scope/Analyzer components display sampled digital waveforms. Pause, change inputs, and resume to see how a circuit responds.
-
-> **Media note:** This repository currently has no checked-in screenshots, animated GIFs, or video clips. The diagrams and truth tables below are documentation examples, not captured screenshots or recorded footage. Add genuine captures under `media/` and link them here when available; don't mistake schematic illustrations for simulator output captures.
-
----
-
 ## What you can build
 
 | Circuit area | Available components and examples |
